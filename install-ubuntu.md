@@ -38,14 +38,14 @@ VirtualBoxを実行し、`仮想マシン(M)`→`新規(N)`で仮想マシンを
 
 ※仮想マシンに`Ubuntu`を含んだ名前を付けると、タイプとバージョンが自動で設定される.
 
-<a href="images/2020-09-22-05-54-01.png"><img src="images/2020-09-22-05-54-01.png" height="200" border="1" /></a>
+<a href="images/2020-09-22-05-54-01.png"><img src="images/2020-09-22-05-54-01.png" height="250" style="border: 1px #f0f0f0 solid;" /></a>
 
 #### (2) メモリーサイズを入力して`次へ(N)`をクリック
 
 ゲストOSに割り当てるメモリーのサイズを入力します。たくさん割り当てることでゲストOSが快適に動作するようになりますが、その分、ホストOSの動作が犠牲になります。
 本書のサンプルを実行する場合、1024～2048MB程度で問題ありません。
 
-<a href="images/2020-09-22-05-56-32.png"><img src="images/2020-09-22-05-56-32.png" height="200" border="1" /></a>
+<a href="images/2020-09-22-05-56-32.png"><img src="images/2020-09-22-05-56-32.png" height="250" style="border: 1px #f0f0f0 solid;" /></a>
 
 #### (3) ハードディスクの作成
 
@@ -60,10 +60,10 @@ VirtualBoxを実行し、`仮想マシン(M)`→`新規(N)`で仮想マシンを
 （ここで紹介しているソフトウェアおよびサンプルデータをインストールした状態で
 約7.5GB弱のディスクを使用します）
 
-<a href="images/2020-09-22-05-57-21.png"><img src="images/2020-09-22-05-57-21.png" height="200" border="1" /></a>
-<a href="images/2020-09-22-05-58-21.png"><img src="images/2020-09-22-05-58-21.png" height="200" border="1" /></a>
-<a href="images/2020-09-22-05-58-44.png"><img src="images/2020-09-22-05-58-44.png" height="200" border="1" /></a>
-<a href="images/2020-09-22-05-59-03.png"><img src="images/2020-09-22-05-59-03.png" height="200" border="1" /></a>
+<a href="images/2020-09-22-05-57-21.png"><img src="images/2020-09-22-05-57-21.png" height="250" style="border: 1px #f0f0f0 solid;" /></a>
+<a href="images/2020-09-22-05-58-21.png"><img src="images/2020-09-22-05-58-21.png" height="250" style="border: 1px #f0f0f0 solid;" /></a>
+<a href="images/2020-09-22-05-58-44.png"><img src="images/2020-09-22-05-58-44.png" height="250" style="border: 1px #f0f0f0 solid;" /></a>
+<a href="images/2020-09-22-05-59-03.png"><img src="images/2020-09-22-05-59-03.png" height="250" style="border: 1px #f0f0f0 solid;" /></a>
 
 #### (4) グラフィックコントローラーの設定（`設定`→`ディスプレイ`）
 
@@ -96,8 +96,8 @@ VirtualBoxを実行し、`仮想マシン(M)`→`新規(N)`で仮想マシンを
 `起動ハードディスクを選択`という画面が表示されるので、
 UbuntuのISOイメージを選択して`起動`をクリックします。
 
-<a href="images/2020-09-22-06-01-04.png"><img src="images/2020-09-22-06-01-04.png" height="200" border="1" /></a>
-<a href="images/2020-09-22-06-00-47.png"><img src="images/2020-09-22-06-00-47.png" height="200" border="1" /></a>
+<a href="images/2020-09-22-06-01-04.png"><img src="images/2020-09-22-06-01-04.png" height="250" style="border: 1px #f0f0f0 solid;" /></a>
+<a href="images/2020-09-22-06-00-47.png"><img src="images/2020-09-22-06-00-47.png" height="250" style="border: 1px #f0f0f0 solid;" /></a>
 
 #### (7) Ubuntuのインストーラーが起動するので、画面に従ってインストールを実行
 
@@ -125,8 +125,8 @@ UbuntuのISOイメージを選択して`起動`をクリックします。
 <a href="images/2020-09-22-06-07-03.png"><img src="images/2020-09-22-06-07-03.png" height="300" /></a>
 <a href="images/2020-09-22-06-07-18.png"><img src="images/2020-09-22-06-07-18.png" height="300" /></a>
 
-再起動したらログイン  
-Guest Additions のインストール
+再起動したらログインし、Guest Additions のインストールを行います。
+Guest AdditionsはVirtualBoxのゲストOS専用のソフトウェアで、インストールすることでゲストOSの画面が見やすくなったり、ゲストOSとホストOSでコピー＆ペーストができるようになるなど、操作性が向上します。
 
 <a href="images/2020-09-22-06-08-30.png"><img src="images/2020-09-22-06-08-30.png" height="300" /></a>
 <a href="images/2020-09-22-06-08-47.png"><img src="images/2020-09-22-06-08-47.png" height="300" /></a>
@@ -154,21 +154,23 @@ sudo apt install gcc make perl
 
 <a href="images/2020-09-22-06-12-09.png"><img src="images/2020-09-22-06-12-09.png" height="300" /></a>
 
-確認メッセージが表示されるので［Enter］
+（確認メッセージが表示されるので［Enter］）
 
 <a href="images/2020-09-22-06-13-46.png"><img src="images/2020-09-22-06-13-46.png" height="300" /></a>
 <a href="images/2020-09-22-06-14-19.png"><img src="images/2020-09-22-06-14-19.png" height="300" /></a>
 
-メディアのアイコンから`ソフトウェアの実行`
+（メディアのアイコンから`ソフトウェアの実行`）
 
 <a href="images/2020-09-22-06-15-28.png"><img src="images/2020-09-22-06-15-28.png" height="300" /></a>
 <a href="images/2020-09-22-06-15-42.png"><img src="images/2020-09-22-06-15-42.png" height="300" /></a>
 <a href="images/2020-09-22-06-15-54.png"><img src="images/2020-09-22-06-15-54.png" height="300" /></a>
 
 <a name="ga_install_completed">（Guest Additionsがインストールできた）</a>
+
 <a href="images/2020-09-22-06-16-06.png"><img src="images/2020-09-22-06-16-06.png" height="300" /></a>
 
-メディアを取り出して再起動
+（メディアを取り出して再起動）
+
 <a href="images/2020-09-22-06-21-24.png"><img src="images/2020-09-22-06-21-24.png" height="300" /></a>
 <a href="images/2020-09-22-06-21-55.png"><img src="images/2020-09-22-06-21-55.png" height="300" /></a>
 <a href="images/2020-09-22-06-22-10.png"><img src="images/2020-09-22-06-22-10.png" height="300" /></a>
