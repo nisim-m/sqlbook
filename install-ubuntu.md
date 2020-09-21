@@ -38,14 +38,14 @@ VirtualBoxを実行し、`仮想マシン(M)`→`新規(N)`で仮想マシンを
 
 ※仮想マシンに`Ubuntu`を含んだ名前を付けると、タイプとバージョンが自動で設定される.
 
-<a href="images/2020-09-22-05-54-01.png"><img src="images/2020-09-22-05-54-01.png" height="250" style="border: 1px #f0f0f0 solid;" /></a>
+<a href="images/2020-09-22-05-54-01.png"><img src="images/2020-09-22-05-54-01.png" height="250" /></a>
 
 #### (2) メモリーサイズを入力して`次へ(N)`をクリック
 
 ゲストOSに割り当てるメモリーのサイズを入力します。たくさん割り当てることでゲストOSが快適に動作するようになりますが、その分、ホストOSの動作が犠牲になります。
 本書のサンプルを実行する場合、1024～2048MB程度で問題ありません。
 
-<a href="images/2020-09-22-05-56-32.png"><img src="images/2020-09-22-05-56-32.png" height="250" style="border: 1px #f0f0f0 solid;" /></a>
+<a href="images/2020-09-22-05-56-32.png"><img src="images/2020-09-22-05-56-32.png" height="250" /></a>
 
 #### (3) ハードディスクの作成
 
@@ -60,10 +60,10 @@ VirtualBoxを実行し、`仮想マシン(M)`→`新規(N)`で仮想マシンを
 （ここで紹介しているソフトウェアおよびサンプルデータをインストールした状態で
 約7.5GB弱のディスクを使用します）
 
-<a href="images/2020-09-22-05-57-21.png"><img src="images/2020-09-22-05-57-21.png" height="250" style="border: 1px #f0f0f0 solid;" /></a>
-<a href="images/2020-09-22-05-58-21.png"><img src="images/2020-09-22-05-58-21.png" height="250" style="border: 1px #f0f0f0 solid;" /></a>
-<a href="images/2020-09-22-05-58-44.png"><img src="images/2020-09-22-05-58-44.png" height="250" style="border: 1px #f0f0f0 solid;" /></a>
-<a href="images/2020-09-22-05-59-03.png"><img src="images/2020-09-22-05-59-03.png" height="250" style="border: 1px #f0f0f0 solid;" /></a>
+<a href="images/2020-09-22-05-57-21.png"><img src="images/2020-09-22-05-57-21.png" height="250" /></a>
+<a href="images/2020-09-22-05-58-21.png"><img src="images/2020-09-22-05-58-21.png" height="250" /></a>
+<a href="images/2020-09-22-05-58-44.png"><img src="images/2020-09-22-05-58-44.png" height="250" /></a>
+<a href="images/2020-09-22-05-59-03.png"><img src="images/2020-09-22-05-59-03.png" height="250" /></a>
 
 #### (4) グラフィックコントローラーの設定（`設定`→`ディスプレイ`）
 
@@ -96,8 +96,8 @@ VirtualBoxを実行し、`仮想マシン(M)`→`新規(N)`で仮想マシンを
 `起動ハードディスクを選択`という画面が表示されるので、
 UbuntuのISOイメージを選択して`起動`をクリックします。
 
-<a href="images/2020-09-22-06-01-04.png"><img src="images/2020-09-22-06-01-04.png" height="250" style="border: 1px #f0f0f0 solid;" /></a>
-<a href="images/2020-09-22-06-00-47.png"><img src="images/2020-09-22-06-00-47.png" height="250" style="border: 1px #f0f0f0 solid;" /></a>
+<a href="images/2020-09-22-06-01-04.png"><img src="images/2020-09-22-06-01-04.png" height="250" /></a>
+<a href="images/2020-09-22-06-00-47.png"><img src="images/2020-09-22-06-00-47.png" height="250" /></a>
 
 #### (7) Ubuntuのインストーラーが起動するので、画面に従ってインストールを実行
 
