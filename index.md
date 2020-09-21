@@ -32,8 +32,17 @@ Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、P
 | [sample-othes.sql](sampledata/sample-othes.sql) | 第6章用サンプルデータ | sampledb |
 | [sample2.sql](sampledata/sample2.sql) | 第7章用サンプルデータ（フクロウ塾） | sampledb2 |
 
-コピー＆ペースト（ファイル名をクリックして表示し、全体を選択してコピー、SQLを実行可能な画面にペースト）、または、ファイルをダウンロードしてインポートする。
+コピー＆ペースト（上記「～.sql」の内容を選択してコピー、SQLを実行可能な画面にペースト）、または、ファイルをダウンロードしてインポートする。
 
+#### ブラウザでSQLをコピーするには
+
+ファイル名（～.sql）をクリックし、<code>Raw</code>ボタンをクリックすると、ファイルの内容だけが表示されるのでCtrl+A（macOSはcommand+A）で全体を選択してCtrl+C（macOSはcommand+C）でコピー。
+
+#### ～.sqlファイルをダウンロードするには
+
+[sampledata](sampledata/)をクリックしてファイルの一覧を表示し、ファイル名を右クリックして、名前を付けてリンク先を保存する。
+
+#### インポートするには
 - [mysqlコマンドの場合（MySQL, MariaDB）](import-mysql.md)
 - [psqlコマンドの場合（PostgreSQL）](import-psql.md)
 - [phpMyAdminの場合（MySQL, MariaDB）](import-phpmyqdmin.md)
