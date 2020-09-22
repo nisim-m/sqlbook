@@ -393,7 +393,7 @@ Adminerは、phpMyAdminと同じくPHPで開発されたデータベース管理
 MySQL/MariaDBの他、PostgreSQLに接続して使用することも可能です。
 
 ファイル1つで実行でき、とても手軽です。
-ここでは、`wget`コマンドでバージョン4.7.7（2020年9月現在の最新版）をダウンロードし、`/var/www/html/`に配置しています。
+ここでは、`wget`コマンドでバージョン4.7.7（2020年9月現在の最新版）をダウンロードし、`/var/www/html/`に`adminer.php`という名前で配置しています。
 
 ```
 wget https://github.com/vrana/adminer/releases/download/v4.7.7/adminer-4.7.7.php
