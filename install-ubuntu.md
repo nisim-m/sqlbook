@@ -213,7 +213,7 @@ sudo apt -y install apache2 php
 apache2 -v
 php -v
 
-# Apacheが起動できているかを確認する(［Esc］キーで終了)
+# Apacheが起動できているかを確認する(［q］キーで終了)
 sudo systemctl status apache2
 ```
 ※`active`と表示されていない場合は、`sudo systemctl restart apache2`を実行してエラーが表示されないか、
@@ -250,7 +250,7 @@ http://localhost/info.php
 http://localhost:8080
 http://localhost:8080/info.php
 
-## MySQLサーバーのインストール
+## MySQLのインストール
 
 ```
 # MySQLおよびPHPから接続するためのツールをインストール
@@ -292,6 +292,7 @@ CREATE DATABASE sampledb default character set utf8mb4;
 CREATE DATABASE sampledb2 default character set utf8mb4;
 SHOW DATABASES; --確認（MySQLで管理しているデータベースが一覧表示される）
 ```
+※作成済のデータベースを削除してから改めて作成したい場合、たとえば「testdb」であれば`DROP DATABASE testdb;`を先に実行してからCREATE DATABASE…を実行。
 
 続いて、テスト用のユーザーを作成します。`study`部分はデータベースに接続するユーザー、`mypqssword`部分は接続に使用するパスワードです。
 適宜、ご自身のユーザー名と使用したいパスワードに置き換えて実行してください。
@@ -310,8 +311,47 @@ CREATE USER 'study'@'localhost' IDENTIFIED BY 'mypassword';
 GRANT ALL ON testdb.* TO 'study'@'localhost' WITH GRANT OPTION;
 GRANT ALL ON sampledb.* TO 'study'@'localhost' WITH GRANT OPTION;
 GRANT ALL ON sampledb2.* TO 'study'@'localhost' WITH GRANT OPTION;
--- 設定した権限を再読込して終了
+```
+
+設定した権限を再読込してmysqlコマンドを終了します。
+
+```
 FLUSH PRIVILEGES;
 quit
 ```
+
+## PostgreSQLのインストール
+
+```
+# PostgreSQLサーバーおよびPHPから接続するためのツールをインストール
+sudo apt -y install postgresql php-pgsql
+
+# PostgreSQL（サーバー）が起動できているかを確認する(［q］キーで終了)
+sudo systemctl status postgresql
+```
+※activeと表示されていない場合は、`sudo systemctl restart postgresql`を実行してエラーが表示されないか、
+また、再度`sudo systemctl status postgresql`を実行してメッセージを確認する。
+
+```
+# システム起動時にMySQL（サーバー）も起動するよう設定
+sudo systemctl enable postgresql
+```
+
+### ユーザーおよびサンプル用データベースの作成
+
+PostgreSQLサーバーに接続するためのコマンドは`psql`で、MySQLの`mysql`コマンドに相当します。
+`psql`だけで実行すると`postgres=# `というプロンプトが表示されてSQLを実行できる他、`psql -c "SQL文"`でSQL文を実行することができます。
+
+PostgreSQLの管理者はpostgresというユーザーなので、以下は`sudo -u postgres psql -c "SQL文"のようにsudoコマンドを使用して実行しています。  
+※sudoコマンドの`-u`オプションは、どのユーザーの権限で実行するかを指定するオプションで、省略時はrootの権限で実行されます。
+
+まず、管理者用のパスワードを
+
+```
+# 管理者用のパスワードを設定
+# ALTER USER ユーザー名 WITH PASSWORD 'DB管理者用のパスワード' を実行
+# 以下の様に小文字で入力しても良い
+sudo -u postgres psql -c "alter user postgres with password 'adminpassword'"
+```
+
 
