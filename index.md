@@ -52,19 +52,12 @@ Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、P
 | ファイル名 | 内容 | インポート先 |
 | ---- | ---- | ---- |
 | [testdb.sql](sampledata/testdb.sql) | 第1章用サンプルデータ（生徒マスター、選択コース） | testdb |
-| [sample-fukurou.sql](sampledata/sample-fukurou.sql) | 第2章～第6章用サンプルデータ（フクロウ塾） | sampledb |
-| [sample-othes.sql](sampledata/sample-othes.sql) | 第6章用サンプルデータ | sampledb |
-| [sample2.sql](sampledata/sample2.sql) | 第7章用サンプルデータ（フクロウ塾） | sampledb2 |
+| [sampledb-fukurou.sql](sampledata/sampledb-fukurou.sql) | 第2章～第6章用サンプルデータ（フクロウ塾） | sampledb |
+| [sampledb-others.sql](sampledata/sampledb-others.sql) | 第6章用サンプルデータ | sampledb |
+| [sampledb2.sql](sampledata/sampledb2.sql) | 第7章用サンプルデータ（フクロウ塾） | sampledb2 |
 
-コピー＆ペースト（上記「～.sql」の内容を選択してコピー、SQLを実行可能な画面にペースト）、または、ファイルをダウンロードしてインポートしてください。
-
-#### ブラウザでSQLをコピーするには
-
-ファイル名（～.sql）をクリックし、<code>Raw</code>ボタンをクリックすると、ファイルの内容だけが表示されるのでCtrl+A（macOSはcommand+A）で全体を選択してCtrl+C（macOSはcommand+C）でコピー。
-
-#### ～.sqlファイルをダウンロードするには
-
-[sampledata](sampledata/)をクリックしてファイルの一覧を表示し、ファイル名を右クリックして、名前を付けてリンク先を保存する。
+ファイル名をクリックするとダウンロードできます。
+拡張子は「.sql」となっていますが、テキストファイルなのでメモ帳やテキストエディットなどで開いて内容を確認することができます。
 
 #### インポートするには（準備中）
 - [mysqlコマンドの場合（MySQL, MariaDB）](import-mysql.md)
