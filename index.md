@@ -29,8 +29,8 @@
 すべてGUI操作でインストール可能（MariaDB）。手軽に試したい人向け  
 XAMPPとはWeb環境用のプログラム開発やテストに使用するソフトウェアをまとめてインストールできるようにしたパッケージで、無償で入手できます。GUI操作のみで簡単にインストールできるというメリットがあります。データベースにはMariaDBが導入され、SQLの実行にはphpMyAdminが利用できます。phpMyAdminはXAMPP管理画面にあるMySQLの「Admin」より実行可能）が利用できます（MariaDBはMySQLを元に開発されており、XAMPPの管理画面には「MySQL」と表示されています）。
   
-- [Windows](install-windows.md)  
-Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、PostgreSQL）、それぞれのコマンド画面からSQLを実行（参考）
+- [DBMSのみ（Windows）](install-windows.md)  
+Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、PostgreSQL）、それぞれのコマンド画面からSQLを実行する（参考）
 
 <a id="markdown-サンプルデータ" name="サンプルデータ"></a>
 ## サンプルデータ

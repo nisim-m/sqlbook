@@ -1,5 +1,11 @@
-DROP VIEW IF EXISTS view2;
-DROP VIEW IF EXISTS view1;
+/*
+  2020.9.22 rev.0
+  サンプルデータ（sampledb、2～6章で使用）
+*/
+
+-- ビュー権限サンプル
+DROP VIEW IF EXISTS view2, view1;
+
 /*
 # 商品・仕入先・倉庫テーブル
   第4正規形、第5正規形、ドメイン正規形サンプル

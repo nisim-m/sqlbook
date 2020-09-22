@@ -1,4 +1,7 @@
-[基本がわかるSQL入門 ——データベース&設計の基礎から楽しく学ぶ サポートページ](https://nisim-m.github.io/sqlbook/) ～テスト環境 その2～
+[基本がわかるSQL入門 サポートページ](https://nisim-m.github.io/sqlbook/) ～テスト環境 その2～
+
+※準備中※
+
 # XAMPP (macOS, Windows)
 
 ## ダウンロード
@@ -39,3 +42,9 @@ sudo mv adminer-4.7.7.php /opt/lamp/htdocs/adminer.php
 
 ## Windows環境の場合
 
+
+
+
+
+----
+[基本がわかるSQL入門 <small>——データベース&設計の基礎から楽しく学ぶ</small> サポートページ](https://nisim-m.github.io/sqlbook/)

@@ -1,3 +1,8 @@
+/*
+  2020.9.22 rev.0
+  フクロウ塾サンプルデータ（sampledb、2～7章で使用）
+*/
+
 DROP VIEW IF EXISTS コース別人数一覧;
 DROP TABLE IF EXISTS exams;
 DROP TABLE IF EXISTS courses;

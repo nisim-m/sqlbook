@@ -1,6 +1,6 @@
 /*
-# sampledb2
-  フクロウ塾（難易度別コース対応）
+  2020.9.22 rev.0
+  フクロウ塾（難易度別コース対応、sampledb2、7章で使用）
 */
 
 DROP TABLE IF EXISTS mentor;
