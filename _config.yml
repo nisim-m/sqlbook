@@ -1,1 +1,6 @@
 theme: jekyll-theme-minimal
+title: 基本がわかるSQL入門 サポートページ
+logo: /assets/img/logo.png
+description: 正誤表、補足情報、サンプルデータなど
+show_downloads: false
+google_analytics: false
