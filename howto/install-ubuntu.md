@@ -255,7 +255,7 @@ sudo apt -y install apache2 php
 apache2 -v
 php -v
 
-# Apacheが起動できているかを確認する(［q］キーで終了、参考画面2)
+# Apacheが起動できているかを確認する(［q］キーで終了、参考画面2）
 sudo systemctl status apache2
 ```
 
@@ -268,9 +268,9 @@ sudo systemctl status apache2
 # システム起動時にApacheも起動するよう設定
 sudo systemctl enable apache2
 ```
-参考画面1
-<a href="images/2020-09-22-14-31-12.png"><img src="images/2020-09-22-14-31-12.png" width="600" /></a>
-参考画面2
+参考画面1  
+<a href="images/2020-09-22-14-31-12.png"><img src="images/2020-09-22-14-31-12.png" width="600" /></a>  
+参考画面2  
 <a href="images/2020-09-22-14-35-06.png"><img src="images/2020-09-22-14-35-06.png" width="600" /></a>
 
 <a id="markdown-動作確認apache-php" name="動作確認apache-php"></a>
@@ -287,7 +287,8 @@ sudo nano /var/www/html/info.php
 <?php phpinfo(); ?>
 ```
 
-![nano実行画面](2020-09-22-14-42-44.png)
+nano実行画面  
+<a href="images/2020-09-22-14-42-44.pn"><img src="images/2020-09-22-14-42-44.png" width="600" /></a>
 
 クライアントOSのWebブラウザ（VirtualBox内のFirefox）
 http://localhost
@@ -317,7 +318,7 @@ http://localhost:8080/info.php
 # MySQLおよびPHPから接続するためのツールをインストール
 sudo apt -y install mysql-server php-mysql
 
-# MySQL（サーバー）が起動できているかを確認する
+# MySQL（サーバー）が起動できているかを確認する(［q］キーで終了）
 sudo systemctl status mysql
 ```
 ※`active`と表示されていない場合は、`sudo systemctl restart mysql`を実行してエラーが表示されないか、
@@ -421,7 +422,7 @@ http://localhost/phpmyadmin/
 ホストOSからアクセスする場合は以下のURLを仕様します。  
 http://localhost:8080/phpmyadmin/  
 
-参考画面1～6
+参考画面1～6  
 <a href="images/2020-09-22-19-15-53.png"><img src="images/2020-09-22-19-15-53.png" width="600" /></a>
 （apt install 実行中に以下の画面が表示される）  
 <a href="images/2020-09-22-19-20-25.png"><img src="images/2020-09-22-19-20-25.png" width="600" /></a>
@@ -468,8 +469,11 @@ sudo apt -y install postgresql php-pgsql
 # PostgreSQL（サーバー）が起動できているかを確認する(［q］キーで終了、画像参照)
 sudo systemctl status postgresql
 
-# システム起動時にMySQL（サーバー）も起動するよう設定
+# システム起動時にPostgreSQL（サーバー）も起動するよう設定
 sudo systemctl enable postgresql
+
+# PHP拡張（php-pgsql）をインストールしたのでApacheを再起動
+sudo systemctl restart apache2
 ```
 
 <a href="images/2020-09-22-19-12-10.png"><img src="images/2020-09-22-19-12-10.png" width="600" /></a>
@@ -531,7 +535,7 @@ sudo -u postgres psql -c "ALTER USER study WITH PASSWORD 'mypassword'"
 ### Webブラウザから接続するための設定
 
 PostgreSQLにWebブラウザ（[Adminer](#adminer)を使用）から接続する場合、設定ファイル`pg_hba.conf`に設定を1行追加する必要があります。
-ここでは、`nano`コマンド（テキストエディタ）で設定ファイルを開き、`local all study md5`という行を追加しています。これは、studyというユーザーはパスワードを使って接続する、という意味の設定です。接続方法の設定は`pg_hba.conf`の上に書かれている行から順番に評価されるので、なるべく上の方に追加すると良いでしょう。
+ここでは、`nano`コマンド（テキストエディタ）で設定ファイルを開き、`local all study md5`という行を追加しています（参考画像）。これは、studyというユーザーはパスワードを使って接続する、という意味の設定です。接続方法の設定は`pg_hba.conf`の上に書かれている行から順番に評価されるので、なるべく上の方に追加すると良いでしょう。
 
 ```
 sudo nano /etc/postgresql/12/main/pg_hba.conf
@@ -542,7 +546,7 @@ sudo nano /etc/postgresql/12/main/pg_hba.conf
 sudo systemctl restart postgresql
 ```
 
-テキストエディタで`local  all  study  md5`という行を追加する
+テキストエディタで`local  all  study  md5`という行を追加  
 <a href="images/2020-09-22-20-11-35.png"><img src="images/2020-09-22-20-11-35.png" width="600" /></a>
 
 Adminerで接続する際には、「データベース種類」で「PostgreSQL」を選択して接続します。
