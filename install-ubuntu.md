@@ -549,4 +549,5 @@ Adminerで接続する際には、「データベース種類」で「PostgreSQL
 <a href="images/2020-09-22-20-04-13.png"><img src="images/2020-09-22-20-04-13.png" width="600" /></a>
 
 
-[基本がわかるSQL入門 ——データベース&設計の基礎から楽しく学ぶ サポートページ](https://nisim-m.github.io/sqlbook/)
+----
+[基本がわかるSQL入門 <small>——データベース&設計の基礎から楽しく学ぶ</small> サポートページ](https://nisim-m.github.io/sqlbook/)

@@ -1,3 +1,4 @@
+<a id="markdown-基本がわかるsql入門" name="基本がわかるsql入門"></a>
 # 基本がわかるSQL入門
 ——データベース&設計の基礎から楽しく学ぶ
 
@@ -5,6 +6,16 @@
 [Amazon](https://www.amazon.co.jp/dp/4297116596/)  
 2020.10
 
+<!-- TOC -->
+
+1. [テスト環境](#テスト環境)
+2. [サンプルデータ](#サンプルデータ)
+   1. [本書で使用するサンプルデータベース](#本書で使用するサンプルデータベース)
+   2. [本書で使用するサンプルデータ](#本書で使用するサンプルデータ)
+
+<!-- /TOC -->
+
+<a id="markdown-テスト環境" name="テスト環境"></a>
 ## テスト環境
 
 本書に掲載しているSQL文を実行するためのテスト環境を導入する方法です。以下の3種類を紹介しています。ご自身が利用している環境とお好みに応じて選択してください。
@@ -21,9 +32,13 @@ XAMPPとはWeb環境用のプログラム開発やテストに使用するソフ
 - [Windows](install-windows.md)  
 Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、PostgreSQL）、それぞれのコマンド画面からSQLを実行（参考）
 
+<a id="markdown-サンプルデータ" name="サンプルデータ"></a>
 ## サンプルデータ
 
+<a id="markdown-本書で使用するサンプルデータベース" name="本書で使用するサンプルデータベース"></a>
 ### 本書で使用するサンプルデータベース
+
+サンプルデータベースおよびテスト用ユーザーの作成方法は、各テスト環境のページを参照してください。
 
 |  データベース名  |  用途  |
 | ---- | ---- |
@@ -31,6 +46,7 @@ Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、P
 | sampledb | メインで使用する「フクロウ塾」のサンプルデータ、および、第6章で使用するサンプルデータ用のデータベース |
 | sampledb2 | 第7章「ケーススタディ」で新たな定義を加えたフクロウ塾のサンプルデータ用のデータベース |
 
+<a id="markdown-本書で使用するサンプルデータ" name="本書で使用するサンプルデータ"></a>
 ### 本書で使用するサンプルデータ
 
 | ファイル名 | 内容 | インポート先 |
@@ -50,8 +66,11 @@ Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、P
 
 [sampledata](sampledata/)をクリックしてファイルの一覧を表示し、ファイル名を右クリックして、名前を付けてリンク先を保存する。
 
-#### インポートするには
+#### インポートするには（準備中）
 - [mysqlコマンドの場合（MySQL, MariaDB）](import-mysql.md)
 - [psqlコマンドの場合（PostgreSQL）](import-psql.md)
 - [phpMyAdminの場合（MySQL, MariaDB）](import-phpmyqdmin.md)
 - [Adminerの場合（MySQL, MariaDB, PostgreSQL）](import-adminer.md)
+
+----
+[基本がわかるSQL入門 <small>——データベース&設計の基礎から楽しく学ぶ</small> サポートページ](https://nisim-m.github.io/sqlbook/)
