@@ -30,7 +30,7 @@
 XAMPPとはWeb環境用のプログラム開発やテストに使用するソフトウェアをまとめてインストールできるようにしたパッケージで、無償で入手できます。GUI操作のみで簡単にインストールできるというメリットがあります。データベースにはMariaDBが導入され、SQLの実行にはphpMyAdminが利用できます。phpMyAdminはXAMPP管理画面にあるMySQLの「Admin」より実行可能）が利用できます（MariaDBはMySQLを元に開発されており、XAMPPの管理画面には「MySQL」と表示されています）。
   
 - [DBMSのみ（Windows）](howto/install-windows.md)  
-Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、PostgreSQL）、それぞれのコマンド画面からSQLを実行する（参考）
+Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、PostgreSQL）、それぞれのコマンドラインクライアントでSQLを実行する（参考、コマンド操作に慣れている人向け）
 
 <a id="sampledata" name="sampledata"></a>
 <a id="markdown-サンプルデータ" name="サンプルデータ"></a>
