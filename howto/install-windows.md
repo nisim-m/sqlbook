@@ -145,18 +145,28 @@ MySQL 8.0の場合、「Authentication Method」画面が表示される
 
 実行画面およびプロンプトは各バージョン共通  
 バージョン8.0.x：  
-<a href="images/2020-09-30-20-58-11.png"><img src="images/2020-09-30-20-58-11.png" width="500" /></a>
+<a href="images/2020-09-30-20-58-11.png"><img src="images/2020-09-30-20-58-11.png" width="600" /></a>
 
 バージョン5.7.x：  
-<a href="images/2020-09-30-20-57-43.png"><img src="images/2020-09-30-20-57-43.png" width="500" /></a>
+<a href="images/2020-09-30-20-57-43.png"><img src="images/2020-09-30-20-57-43.png" width="600" /></a>
 
 <a id="markdown-データベースの作成" name="データベースの作成"></a>
 ### データベースの作成
 
-※準備中
-データベースの作成（CREATE DATABASE～）
-「use データベース名」でデータベースを指定して、テーブルの作成等を行う
+スタートメニューで「MySQL 8.0 Command Line Client - Unicode」を実行するとmysqlコマンド（mysql.exe）が起動し、`mysql>`というプロンプトが表示されるので、以下のコマンドを実行します。
 
+```
+-- サンプルデータベース用のデータベース3つを作成
+CREATE DATABASE testdb default character set utf8mb4;
+CREATE DATABASE sampledb default character set utf8mb4;
+CREATE DATABASE sampledb2 default character set utf8mb4;
+
+--確認（MySQLで管理しているデータベースが一覧表示される）
+SHOW DATABASES; 
+```
+
+実行イメージ  
+<a href="images/2020-10-01-01-04-54.png"><img src="images/2020-10-01-01-04-54.png" /></a>
 
 <a id="markdown-mariadb" name="mariadb"></a>
 ## MariaDB
