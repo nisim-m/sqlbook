@@ -61,7 +61,7 @@ Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、P
 拡張子は「.sql」となっていますが、テキストファイルなのでメモ帳やテキストエディットなどで開いて内容を確認することができます。
 
 #### サンプルデータをインポートするには
-- [mysqlコマンドの場合（MySQL, MariaDB）](howto/import-mysql.md)（準備中）
+- [mysqlコマンドの場合（MySQL, MariaDB）](howto/import-mysql.md)
 - [psqlコマンドの場合（PostgreSQL）](howto/import-psql.md)（準備中）
 - [phpMyAdminの場合（MySQL, MariaDB）](howto/import-phpmyadmin.md)
 - [Adminerの場合（MySQL, MariaDB, PostgreSQL）](howto/import-adminer.md)
