@@ -59,7 +59,10 @@ MySQLのダウンロードページ [https://www.mysql.com/jp/downloads/](https:
 
 <a href="images/2020-09-30-19-41-00.png"><img src="images/2020-09-30-19-41-00.png" width="300" /></a>
 <a href="images/2020-09-30-19-43-33.png"><img src="images/2020-09-30-19-43-33.png" width="300" /></a>  
+<a href="images/2020-09-30-23-51-24.png"><img src="images/2020-09-30-23-51-24.png" width="400" /></a>
 <a href="images/2020-09-30-19-43-49.png"><img src="images/2020-09-30-19-43-49.png" width="300" /></a>
+
+アップデートのメッセージが出ていた場合は「OK」をクリック
 <a href="images/2020-09-30-19-44-03.png"><img src="images/2020-09-30-19-44-03.png" width="300" /></a>
 
 サーバーだけで良い場合や複数バージョンをインストールしたい場合は「Custom」を選択  
@@ -68,21 +71,15 @@ MySQLのダウンロードページ [https://www.mysql.com/jp/downloads/](https:
 <a href="images/2020-09-30-19-45-43.png"><img src="images/2020-09-30-19-45-43.png" width="400" /></a>
 （他のバージョンが必要な場合は追加）  
 <a href="images/2020-09-30-19-46-49.png"><img src="images/2020-09-30-19-46-49.png" width="400" /></a>
-（他のバージョンが必要な場合は追加）  
-<a href="images/2020-09-30-19-47-43.png"><img src="images/2020-09-30-19-47-43.png" width="400" /></a>
 
 必要なバージョンが選択できたら「Next」をクリック（後で追加することも可能）
 <a href="images/2020-09-30-19-47-55.png"><img src="images/2020-09-30-19-47-55.png" width="400" /></a>
 
-バージョン5.6および5.7の場合、追加ソフトウェア（Microsoft Visual C++のライブラリ）が必要になることがあります。**「Execute」**をクリックすることでインストールできます。
+バージョンによっては追加ソフトウェア（Microsoft Visual C++のライブラリ）が必要になることがあります。**「Execute」**をクリックすることでインストールできます。
 <a href="images/2020-09-30-19-48-26.png"><img src="images/2020-09-30-19-48-26.png" width="400" /></a>
 （Microsoft Visual C++ 2013 ※MySQL 5.7用）
 <a href="images/2020-09-30-19-49-45.png"><img src="images/2020-09-30-19-49-45.png" width="300" /></a>
 <a href="images/2020-09-30-19-49-54.png"><img src="images/2020-09-30-19-49-54.png" width="300" /></a>
-
-（Microsoft Visual C++ 2010 ※MySQL 5.6用）
-<a href="images/2020-09-30-21-22-58.png"><img src="images/2020-09-30-21-22-58.png" width="300" /></a>
-<a href="images/2020-09-30-19-50-16.png"><img src="images/2020-09-30-19-50-16.png" width="300" /></a>
 
 <a href="images/2020-09-30-19-50-26.png"><img src="images/2020-09-30-19-50-26.png" width="400" /></a>
 
@@ -100,35 +97,19 @@ MySQLのダウンロードページ [https://www.mysql.com/jp/downloads/](https:
 
 「Type and Networking」画面で**ポート番号を設定**する  
 複数バージョンをインストールする場合は、バージョン毎にポート番号を変えておく（1024から49451の範囲で指定、デフォルトは3306）  
-<a href="images/2020-09-30-20-04-56.png"><img src="images/2020-09-30-20-04-56.png" width="400" /></a>
-
-管理者用のパスワードを入力し、「Add User」でテスト用のユーザーを追加する  
-<a href="images/2020-09-30-20-06-47.png"><img src="images/2020-09-30-20-06-47.png" width="400" /></a>
-ユーザー名を入力（任意、ここでは「study」）して、ホストは「localhost」にする  
-データベースの作成やデータのインポートを行うユーザーの場合、ロールは「DB Admin」にする  
-パスワードを入力して「OK」をクリック（自分専用のローカルPCで使用する場合は簡単なパスワードでも良い）  
-<a href="images/2020-09-30-20-08-50.png"><img src="images/2020-09-30-20-08-50.png" width="250" /></a>
-
-ユーザーを追加したら「Next」で進める
-<a href="images/2020-09-30-20-12-13.png"><img src="images/2020-09-30-20-12-13.png" width="400" /></a>
-
-デフォルトでは、Windows起動時にMySQLサーバーがWindowsサービスとして起動する（変更可能）  
-<a href="images/2020-09-30-20-30-43.png"><img src="images/2020-09-30-20-30-43.png" width="400" /></a>
-
-「Execute」でインストールを実行（設定を修正したい場合は「Back」で戻る）  
-<a href="images/2020-09-30-20-16-49.png"><img src="images/2020-09-30-20-16-49.png" width="400" /></a>
-<a href="images/2020-09-30-20-17-30.png"><img src="images/2020-09-30-20-17-30.png" width="400" /></a>
-
-複数バージョンをインストールする場合は「Product Configuration」が再度表示されるので「Next」をクリック  
-<a href="images/2020-09-30-20-17-58.png"><img src="images/2020-09-30-20-17-58.png" width="400" /></a>
-同様に設定を行う  
 <a href="images/2020-09-30-20-20-02.png"><img src="images/2020-09-30-20-20-02.png" width="400" /></a>
 
-サーバー管理者用のパスワードを設定し、テスト用のユーザーを追加する  
+管理者用のパスワードを入力し、「Add User」でテスト用のユーザーを追加する  
 <a href="images/2020-09-30-20-26-53.png"><img src="images/2020-09-30-20-26-53.png" width="400" /></a>
+ユーザー名を入力（任意、ここでは「study」）して、ホストは「localhost」にする  
+データベースの作成やデータのインポートを行うユーザーの場合、ロールは「DB Admin」にする  
+パスワードを入力して「OK」をクリック（自分専用のローカルPCで使用する場合は簡単なパスワードでも良い）   
 <a href="images/2020-09-30-21-36-11.png"><img src="images/2020-09-30-21-36-11.png" width="250" /></a>
+ユーザーを追加したら「Next」で進める  
 <a href="images/2020-09-30-20-31-56.png"><img src="images/2020-09-30-20-31-56.png" width="400" /></a>
+デフォルトでは、Windows起動時にMySQLサーバーがWindowsサービスとして起動する（変更可能）  
 <a href="images/2020-09-30-20-33-15.png"><img src="images/2020-09-30-20-33-15.png" width="400" /></a>
+「Execute」でインストールを実行（設定を修正したい場合は「Back」で戻る）  
 <a href="images/2020-09-30-20-33-49.png"><img src="images/2020-09-30-20-33-49.png" width="400" /></a>
 <a href="images/2020-09-30-20-34-15.png"><img src="images/2020-09-30-20-34-15.png" width="400" /></a>
 
@@ -168,10 +149,6 @@ MySQL 8.0の場合、「Authentication Method」画面が表示される
 
 バージョン5.7.x：  
 <a href="images/2020-09-30-20-57-43.png"><img src="images/2020-09-30-20-57-43.png" width="500" /></a>
-
-バージョン5.6.x：  
-<a href="images/2020-09-30-20-57-58.png"><img src="images/2020-09-30-20-57-58.png" width="500" /></a>
-
 
 <a id="markdown-データベースの作成" name="データベースの作成"></a>
 ### データベースの作成
