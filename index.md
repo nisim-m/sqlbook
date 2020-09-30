@@ -59,11 +59,11 @@ Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、P
 ファイル名をクリックするとダウンロードできます。
 拡張子は「.sql」となっていますが、テキストファイルなのでメモ帳やテキストエディットなどで開いて内容を確認することができます。
 
-#### インポートするには（準備中）
-- [mysqlコマンドの場合（MySQL, MariaDB）](howto/import-mysql.md)
-- [psqlコマンドの場合（PostgreSQL）](howto/import-psql.md)
-- [phpMyAdminの場合（MySQL, MariaDB）](howto/import-phpmyqdmin.md)
-- [Adminerの場合（MySQL, MariaDB, PostgreSQL）](howto/import-adminer.md)
+#### インポートするには
+- [mysqlコマンドの場合（MySQL, MariaDB）](howto/import-mysql.md)（準備中）
+- [psqlコマンドの場合（PostgreSQL）](howto/import-psql.md)（準備中）
+- [phpMyAdminの場合（MySQL, MariaDB）](howto/import-phpmyadmin.md)
+- [Adminerの場合（MySQL, MariaDB, PostgreSQL）](howto/import-adminer.md)（準備中）
 
 ----
 [基本がわかるSQL入門 <small>——データベース&設計の基礎から楽しく学ぶ</small> サポートページ](https://nisim-m.github.io/sqlbook/)
