@@ -158,7 +158,7 @@ MySQLサーバーをインストールすると、コマンドラインクライ
 <a href="images/2020-09-30-20-57-43.png"><img src="images/2020-09-30-20-57-43.png" width="600" /></a>
 
 <a id="markdown-データベースの作成" name="データベースの作成"></a>
-### データベースの作成
+### データベースの作成（mysqlコマンド）
 
 スタートメニューで「MySQL 8.0 Command Line Client - Unicode」を実行するとmysqlコマンド（mysql.exe）が起動し、`mysql>`というプロンプトが表示されるので、以下のコマンドを実行します。
 
@@ -190,6 +190,10 @@ MariaDBのダウンロードページ [https://mariadb.com/downloads/](https://m
 ### インストール
 
 上記でダウンロードしたファイルを実行し、画面に従ってインストールを進めます。
+
+### データベースの作成（mysqlコマンド）
+
+MariaDBのコマンドラインクライアントもmysqlコマンド（mysql.exe）です。使い方も同じです。
 
 
 <a id="markdown-postgresql" name="postgresql"></a>
