@@ -32,6 +32,7 @@ XAMPPとはWeb環境用のプログラム開発やテストに使用するソフ
 - [DBMSのみ（Windows）](howto/install-windows.md)  
 Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、PostgreSQL）、それぞれのコマンド画面からSQLを実行する（参考）
 
+<a id="sampledata" name="sampledata"></a>
 <a id="markdown-サンプルデータ" name="サンプルデータ"></a>
 ## サンプルデータ
 
