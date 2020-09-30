@@ -1,16 +1,14 @@
 [基本がわかるSQL入門 サポートページ](https://nisim-m.github.io/sqlbook/) ～テスト環境 その3～
 
-※準備中※
-
 <!-- TOC -->
 
 1. [MySQL](#mysql)
    1. [インストール](#インストール)
    2. [コマンドラインクライアント（mysqlコマンド）の起動](#コマンドラインクライアントmysqlコマンドの起動)
    3. [データベースの作成](#データベースの作成)
-2. [MariaDB](#mariadb)
+2. [MariaDB ※準備中※](#mariadb)
    1. [インストール](#インストール-1)
-3. [PostgreSQL](#postgresql)
+3. [PostgreSQL ※準備中※](#postgresql)
    1. [インストール](#インストール-2)
 
 <!-- /TOC -->
@@ -136,12 +134,14 @@ MySQL 8.0の場合、「Authentication Method」画面が表示される
 <a id="markdown-コマンドラインクライアントmysqlコマンドの起動" name="コマンドラインクライアントmysqlコマンドの起動"></a>
 ### コマンドラインクライアント（mysqlコマンド）の起動
 
-コマンドラインクライアントはスタートメニューの「MySQL」グループから起動する
+MySQLサーバーをインストールすると、コマンドラインクライアント（mysql.exe）がインストールされます。  
+コマンドラインクライアントは、スタートメニューの「MySQL」グループから起動することができます。  
 <a href="images/2020-09-30-20-51-29.png"><img src="images/2020-09-30-20-51-29.png" width="500" /></a>
 
-クライアントを実行すると「Enter password:」と表示されるので
-テスト用ユーザーのパスワードを入力してEnterして接続  
-「mysql>」というパスワードが表示されるので、SQL文を入力する
+クライアントを実行すると「Enter password:」と表示されるので、
+インストール時に設定したテスト用ユーザーのパスワードを入力してEnterして接続してください。
+接続できると「mysql>」というプロンプトが表示されます。ここで、SQL文を入力して実行します。
+
 
 実行画面およびプロンプトは各バージョン共通  
 バージョン8.0.x：  
@@ -154,6 +154,9 @@ MySQL 8.0の場合、「Authentication Method」画面が表示される
 ### データベースの作成
 
 スタートメニューで「MySQL 8.0 Command Line Client - Unicode」を実行するとmysqlコマンド（mysql.exe）が起動し、`mysql>`というプロンプトが表示されるので、以下のコマンドを実行します。
+
+コピー＆ペーストでも実行できます。この場合、7行まとめて選択してコピーし、プロンプト（`mysql>`）で右クリックしてペーストします。
+一度実行した内容は、上下矢印キーで再度表示し、左右の矢印キーでカーソルを動かして編集することもできます。  
 
 ```
 -- サンプルデータベース用のデータベース3つを作成
@@ -169,7 +172,7 @@ SHOW DATABASES;
 <a href="images/2020-10-01-01-04-54.png"><img src="images/2020-10-01-01-04-54.png" /></a>
 
 <a id="markdown-mariadb" name="mariadb"></a>
-## MariaDB
+## MariaDB 
 
 ※準備中
 MariaDBのダウンロードページ [https://mariadb.com/downloads/](https://mariadb.com/downloads/) より、「MariaDB Platform」の「MariaDB Community Server」で「Version」と「OS」を選択して「Download」をクリックします。
