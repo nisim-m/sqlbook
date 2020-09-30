@@ -63,7 +63,7 @@ Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、P
 - [mysqlコマンドの場合（MySQL, MariaDB）](howto/import-mysql.md)（準備中）
 - [psqlコマンドの場合（PostgreSQL）](howto/import-psql.md)（準備中）
 - [phpMyAdminの場合（MySQL, MariaDB）](howto/import-phpmyadmin.md)
-- [Adminerの場合（MySQL, MariaDB, PostgreSQL）](howto/import-adminer.md)（準備中）
+- [Adminerの場合（MySQL, MariaDB, PostgreSQL）](howto/import-adminer.md)
 
 ----
 [基本がわかるSQL入門 <small>——データベース&設計の基礎から楽しく学ぶ</small> サポートページ](https://nisim-m.github.io/sqlbook/)
