@@ -60,7 +60,7 @@ MySQLのダウンロードページ [https://www.mysql.com/jp/downloads/](https:
 <a href="images/2020-09-30-23-51-24.png"><img src="images/2020-09-30-23-51-24.png" width="400" /></a>
 <a href="images/2020-09-30-19-43-49.png"><img src="images/2020-09-30-19-43-49.png" width="300" /></a>
 
-アップデートのメッセージが出ていた場合は「OK」をクリック
+アップデートのメッセージが出ていた場合は「OK」をクリック  
 <a href="images/2020-09-30-19-44-03.png"><img src="images/2020-09-30-19-44-03.png" width="300" /></a>
 
 サーバーだけで良い場合や複数バージョンをインストールしたい場合は「Custom」を選択  
@@ -70,12 +70,13 @@ MySQLのダウンロードページ [https://www.mysql.com/jp/downloads/](https:
 （他のバージョンが必要な場合は追加）  
 <a href="images/2020-09-30-19-46-49.png"><img src="images/2020-09-30-19-46-49.png" width="400" /></a>
 
-必要なバージョンが選択できたら「Next」をクリック（後で追加することも可能）
+必要なバージョンが選択できたら「Next」をクリック（後で追加することも可能）  
 <a href="images/2020-09-30-19-47-55.png"><img src="images/2020-09-30-19-47-55.png" width="400" /></a>
 
-バージョンによっては追加ソフトウェア（Microsoft Visual C++のライブラリ）が必要になることがあります。**「Execute」**をクリックすることでインストールできます。
+バージョンによっては追加ソフトウェア（Microsoft Visual C++のライブラリ）が必要になることがあります。
+**「Execute」をクリック**することでインストールできます。  
 <a href="images/2020-09-30-19-48-26.png"><img src="images/2020-09-30-19-48-26.png" width="400" /></a>
-（Microsoft Visual C++ 2013 ※MySQL 5.7用）
+（Microsoft Visual C++ 2013 ※MySQL 5.7用）  
 <a href="images/2020-09-30-19-49-45.png"><img src="images/2020-09-30-19-49-45.png" width="300" /></a>
 <a href="images/2020-09-30-19-49-54.png"><img src="images/2020-09-30-19-49-54.png" width="300" /></a>
 
@@ -89,8 +90,9 @@ MySQLのダウンロードページ [https://www.mysql.com/jp/downloads/](https:
 ※ダウンロードできなかった場合「Error」と表示されるので「Try again」をクリック  
 <a href="images/2020-09-30-20-00-19.png"><img src="images/2020-09-30-20-00-19.png" width="400" /></a>
 
-ダウンロードが終わると「Complete」と表示されるので「Next」で進める
+ダウンロードが終わると「Complete」と表示されるので「Next」で進める  
 <a href="images/2020-09-30-19-54-04.png"><img src="images/2020-09-30-19-54-04.png" width="400" /></a>
+「Ready to configure」と表示されるので「Next」で設定を開始する
 <a href="images/2020-09-30-19-54-53.png"><img src="images/2020-09-30-19-54-53.png" width="400" /></a>
 
 「Type and Networking」画面で**ポート番号を設定**する  
@@ -103,18 +105,23 @@ MySQLのダウンロードページ [https://www.mysql.com/jp/downloads/](https:
 データベースの作成やデータのインポートを行うユーザーの場合、ロールは「DB Admin」にする  
 パスワードを入力して「OK」をクリック（自分専用のローカルPCで使用する場合は簡単なパスワードでも良い）   
 <a href="images/2020-09-30-21-36-11.png"><img src="images/2020-09-30-21-36-11.png" width="250" /></a>
+
 ユーザーを追加したら「Next」で進める  
 <a href="images/2020-09-30-20-31-56.png"><img src="images/2020-09-30-20-31-56.png" width="400" /></a>
+
 デフォルトでは、Windows起動時にMySQLサーバーがWindowsサービスとして起動する（変更可能）  
 <a href="images/2020-09-30-20-33-15.png"><img src="images/2020-09-30-20-33-15.png" width="400" /></a>
+
 「Execute」でインストールを実行（設定を修正したい場合は「Back」で戻る）  
 <a href="images/2020-09-30-20-33-49.png"><img src="images/2020-09-30-20-33-49.png" width="400" /></a>
 <a href="images/2020-09-30-20-34-15.png"><img src="images/2020-09-30-20-34-15.png" width="400" /></a>
 
 複数バージョンをインストールする場合は「Product Configuration」が再度表示されるので「Next」をクリック  
 <a href="images/2020-09-30-20-34-43.png"><img src="images/2020-09-30-20-34-43.png" width="400" /></a>
+
 同様に設定を行う  
 <a href="images/2020-09-30-20-37-03.png"><img src="images/2020-09-30-20-37-03.png" width="400" /></a>
+
 MySQL 8.0の場合、「Authentication Method」画面が表示される  
 通常は新しい認証方式（デフォルト）を使用。他システム（Microsoft Accessなど）と組み合わせて使用したい場合など、状況によっては古い認証方式にするケースがある（※本ページでは扱っていません）  
 <a href="images/2020-09-30-20-37-44.png"><img src="images/2020-09-30-20-37-44.png" width="400" /></a>
@@ -128,7 +135,7 @@ MySQL 8.0の場合、「Authentication Method」画面が表示される
 <a href="images/2020-09-30-20-46-18.png"><img src="images/2020-09-30-20-46-18.png" width="400" /></a>
 <a href="images/2020-09-30-20-47-06.png"><img src="images/2020-09-30-20-47-06.png" width="400" /></a>
 
-完了すると「Installation Complete」と表示されるので「Finish」をクリック
+完了すると「Installation Complete」と表示されるので「Finish」をクリック  
 <a href="images/2020-09-30-20-47-36.png"><img src="images/2020-09-30-20-47-36.png" width="400" /></a>
 
 <a id="markdown-コマンドラインクライアントmysqlコマンドの起動" name="コマンドラインクライアントmysqlコマンドの起動"></a>
