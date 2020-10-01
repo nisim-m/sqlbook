@@ -1,4 +1,3 @@
-<a id="markdown-基本がわかるsql入門" name="基本がわかるsql入門"></a>
 # 基本がわかるSQL入門
 ——データベース&設計の基礎から楽しく学ぶ
 
@@ -19,6 +18,14 @@
 ## テスト環境
 
 本書に掲載しているSQL文を実行するためのテスト環境を導入する方法です。以下の3種類を紹介しています。ご自身が利用している環境とお好みに応じて選択してください。
+
+<div>
+おすすめルート：
+[A]LinuxにMySQLとPostgreSQLを入れて試したい  
+[VirtualBox ＋ Ubuntu](howto/install-ubuntu.md)を参照してひととおりインストール→[サンプルデータ](#サンプルデータ)をダウンロード→[Adminer](howto/import-adminer.md)でサンプルデータをインポート  
+[B] GUIでさくっとインストールしてSQLを試したい  
+[XAMPP (macOS, Windows)](howto/install-xampp.md)→[サンプルデータ](#サンプルデータ)をダウンロード→[phpMyAdminの場合](howto/import-phpmyadmin.md)でサンプルデータをインポート  
+</div>
 
 - [VirtualBox + Ubuntu](howto/install-ubuntu.md)  
 仮想環境にUbuntuをインストールし、DBMSをインストールする （MySQL、PostgreSQL）  
