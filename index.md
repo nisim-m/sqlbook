@@ -30,7 +30,7 @@ XAMPPとはWeb環境用のプログラム開発やテストに使用するソフ
 - [DBMSのみ（Windows）](howto/install-windows.md)  
 Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、PostgreSQL）、それぞれのコマンドラインクライアントでSQLを実行する（参考、コマンド操作に慣れている人向け）
 
-#### おすすめルート
+#### 🚀おすすめルート🚀
 **LinuxにMySQLとPostgreSQLを入れて試したい**  
 1. [VirtualBox ＋ Ubuntu](howto/install-ubuntu.md)を参照してひととおりインストール
 1. [サンプルデータ](#サンプルデータ)をダウンロード
