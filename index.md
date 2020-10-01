@@ -69,7 +69,7 @@ Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、P
 
 #### サンプルデータをインポートするには
 - [mysqlコマンドの場合（MySQL, MariaDB ※コマンド操作に慣れている人向け）](howto/import-mysql.md)
-- [psqlコマンドの場合（PostgreSQL ※コマンド操作に慣れている人向け）](howto/import-psql.md)（準備中）
+- [psqlコマンドの場合（PostgreSQL ※コマンド操作に慣れている人向け）](howto/import-psql.md)
 - [phpMyAdminの場合（MySQL, MariaDB）](howto/import-phpmyadmin.md)
 - [Adminerの場合（MySQL, MariaDB, PostgreSQL）](howto/import-adminer.md)
 
