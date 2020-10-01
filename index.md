@@ -19,13 +19,16 @@
 
 本書に掲載しているSQL文を実行するためのテスト環境を導入する方法です。以下の3種類を紹介しています。ご自身が利用している環境とお好みに応じて選択してください。
 
-<div>
-おすすめルート：
-[A]LinuxにMySQLとPostgreSQLを入れて試したい  
-[VirtualBox ＋ Ubuntu](howto/install-ubuntu.md)を参照してひととおりインストール→[サンプルデータ](#サンプルデータ)をダウンロード→[Adminer](howto/import-adminer.md)でサンプルデータをインポート  
-[B] GUIでさくっとインストールしてSQLを試したい  
-[XAMPP (macOS, Windows)](howto/install-xampp.md)→[サンプルデータ](#サンプルデータ)をダウンロード→[phpMyAdminの場合](howto/import-phpmyadmin.md)でサンプルデータをインポート  
-</div>
+**おすすめルート**
++ LinuxにMySQLとPostgreSQLを入れて試したい
+   1. [VirtualBox ＋ Ubuntu](howto/install-ubuntu.md)を参照してひととおりインストール
+   1. [サンプルデータ](#サンプルデータ)をダウンロード
+   1. [Adminer](howto/import-adminer.md)でサンプルデータをインポート
++ GUIでさくっとインストールしてSQLを試したい
+   1. [XAMPP (macOS, Windows)](howto/install-xampp.md)
+   1. [サンプルデータ](#サンプルデータ)をダウンロード
+   1. [phpMyAdminの場合](howto/import-phpmyadmin.md)でサンプルデータをインポート
+
 
 - [VirtualBox + Ubuntu](howto/install-ubuntu.md)  
 仮想環境にUbuntuをインストールし、DBMSをインストールする （MySQL、PostgreSQL）  
