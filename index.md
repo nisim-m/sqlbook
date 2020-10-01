@@ -18,15 +18,6 @@
 ## テスト環境
 
 本書に掲載しているSQL文を実行するためのテスト環境を導入する方法です。以下の3種類を紹介しています。ご自身が利用している環境とお好みに応じて選択してください。
-
-<div>
-おすすめルート：
-[A]LinuxにMySQLとPostgreSQLを入れて試したい  
-[VirtualBox ＋ Ubuntu](howto/install-ubuntu.md)を参照してひととおりインストール→[サンプルデータ](#サンプルデータ)をダウンロード→[Adminer](howto/import-adminer.md)でサンプルデータをインポート  
-[B] GUIでさくっとインストールしてSQLを試したい  
-[XAMPP (macOS, Windows)](howto/install-xampp.md)→[サンプルデータ](#サンプルデータ)をダウンロード→[phpMyAdminの場合](howto/import-phpmyadmin.md)でサンプルデータをインポート  
-</div>
-
 - [VirtualBox + Ubuntu](howto/install-ubuntu.md)  
 仮想環境にUbuntuをインストールし、DBMSをインストールする （MySQL、PostgreSQL）  
 テスト環境や勉強用の環境を作りたいときには、VirtualBoxのような「仮想化環境」が便利です。VirtualBoxを利用することで、普段使っているOSはそのままで、別途OSを動かし、そこでデータベースを動かすことができます。環境の作り直しも簡単で、テスト環境が不要になったら仮想環境ごと削除することもできます。Unix系OSでの導入を考えている場合、本番環境に近い環境で試すことができるというメリットがあります。  
@@ -38,6 +29,17 @@ XAMPPとはWeb環境用のプログラム開発やテストに使用するソフ
   
 - [DBMSのみ（Windows）](howto/install-windows.md)  
 Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、PostgreSQL）、それぞれのコマンドラインクライアントでSQLを実行する（参考、コマンド操作に慣れている人向け）
+
+#### おすすめルート
+**LinuxにMySQLとPostgreSQLを入れて試したい**  
+1. [VirtualBox ＋ Ubuntu](howto/install-ubuntu.md)を参照してひととおりインストール
+1. [サンプルデータ](#サンプルデータ)をダウンロード
+1. [Adminer](howto/import-adminer.md)でサンプルデータをインポート
+
+**GUIでさくっとインストールしてSQLを試したい**    
+1. [XAMPP](howto/install-xampp.md)をインストール
+1. [サンプルデータ](#サンプルデータ)をダウンロード
+1. [phpMyAdminの場合](howto/import-phpmyadmin.md)でサンプルデータをインポート
 
 <a id="sampledata" name="sampledata"></a>
 <a id="markdown-サンプルデータ" name="サンプルデータ"></a>
