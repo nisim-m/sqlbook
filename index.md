@@ -31,14 +31,15 @@ XAMPPとはWeb環境用のプログラム開発やテストに使用するソフ
 Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、PostgreSQL）、それぞれのコマンドラインクライアントでSQLを実行する（参考、コマンド操作に慣れている人向け）
 
 #### おすすめルート
-+ LinuxにMySQLとPostgreSQLを入れて試したい
-   1. [VirtualBox ＋ Ubuntu](howto/install-ubuntu.md)を参照してひととおりインストール
-   1. [サンプルデータ](#サンプルデータ)をダウンロード
-   1. [Adminer](howto/import-adminer.md)でサンプルデータをインポート
-+ GUIでさくっとインストールしてSQLを試したい
-   1. [XAMPP (macOS, Windows)](howto/install-xampp.md)
-   1. [サンプルデータ](#サンプルデータ)をダウンロード
-   1. [phpMyAdminの場合](howto/import-phpmyadmin.md)でサンプルデータをインポート
+**LinuxにMySQLとPostgreSQLを入れて試したい**  
+1. [VirtualBox ＋ Ubuntu](howto/install-ubuntu.md)を参照してひととおりインストール
+1. [サンプルデータ](#サンプルデータ)をダウンロード
+1. [Adminer](howto/import-adminer.md)でサンプルデータをインポート
+
+**GUIでさくっとインストールしてSQLを試したい**    
+1. [XAMPP](howto/install-xampp.md)をインストール
+1. [サンプルデータ](#サンプルデータ)をダウンロード
+1. [phpMyAdminの場合](howto/import-phpmyadmin.md)でサンプルデータをインポート
 
 <a id="sampledata" name="sampledata"></a>
 <a id="markdown-サンプルデータ" name="サンプルデータ"></a>
