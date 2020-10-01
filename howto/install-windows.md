@@ -11,6 +11,7 @@
    2. [コマンドラインクライアント（mysqlコマンド）の起動](#コマンドラインクライアントmysqlコマンドの起動-1)
    3. [データベースの作成（mysqlコマンド）](#データベースの作成mysqlコマンド-1)
    4. [テスト用ユーザーの作成（mysqlコマンド）](#テスト用ユーザーの作成mysqlコマンド)
+   5. [【参考】mysqlコマンドでサンプルデータを読み込むには](#参考mysqlコマンドでサンプルデータを読み込むには)
 3. [PostgreSQL](#postgresql)
    1. [インストール](#インストール)
    2. [データベースの作成（psqlコマンド）](#データベースの作成psqlコマンド)
@@ -116,7 +117,7 @@ MariaDBのダウンロードページ [https://mariadb.com/downloads/](https://m
 - MySQLサーバーなどと共存させたい場合はポート番号を変更する
 - インストール後、設定ファイル「my.ini」（スタートメニュー「MariaDBグループ）でデフォルトの文字コードを変更する
 
-以下は`mariadb-10.5.5-winx64.msi`による実行例です。※準備中  
+以下は`mariadb-10.5.5-winx64.msi`による実行例です。
 <a id="mariadb-install" name="mariadb-install"></a>[→MariaDBのインストールサンプル（Windows環境）](install-windows-mariadb.md)
 
 <a id="markdown-コマンドラインクライアントmysqlコマンドの起動-1" name="コマンドラインクライアントmysqlコマンドの起動-1"></a>
@@ -137,7 +138,7 @@ MySQLのコマンドラインクライアントと同じ名前で、使い方も
 <a id="markdown-データベースの作成mysqlコマンド-1" name="データベースの作成mysqlコマンド-1"></a>
 ### データベースの作成（mysqlコマンド）
 
-コマンドラインクライアントが起動すると、`MariaDB [(none)]>`というプロンプトが表示されるので、以下のコマンドを実行します。
+<a if="sampledb-mariadb" name="sampledb-mariadb"></a>コマンドラインクライアントが起動すると、`MariaDB [(none)]>`というプロンプトが表示されるので、以下のコマンドを実行します。
 ※ `--`以降はコメントなので入力不要です。この画面からコピー＆ペーストして実行する場合は`--`以降の部分も一緒にペーストしてかまいません。
 ※SQLのキーワードは大文字にしていますが、入力は小文字でもかまいません（p.24 2.1節「SQLの種類と基本的な書式」）。
 
@@ -209,7 +210,45 @@ mysql -ustudy -p
 
 コピーした「MySQL Client」ショートカットのプロパティを開き「リンク先」を修正  
 `-uroot`を`-uユーザー名`とする（この画像では`-ustudy`に変更、`-u`の直後にスペースを入れないよう注意）
-<a href="images/2020-10-01-15-45-47.png"><img src="images/2020-10-01-15-45-47.png" width="400" /></a>
+<a href="images/2020-10-01-15-45-47.png"><img src="images/2020-10-01-15-45-47.png" width="200" /></a>
+
+<a id="markdown-参考mysqlコマンドでサンプルデータを読み込むには" name="参考mysqlコマンドでサンプルデータを読み込むには"></a>
+### 【参考】mysqlコマンドでサンプルデータを読み込むには
+
+<a id="import-mariadb-mysql" name="import-mariadb-mysql"></a>
+
+Windows環境のMariaDBの場合、デフォルトの状態だとクライアントコマンドの画面（Windowsのコマンド画面）でUTF-8が文字化けします。
+
+mysqlコマンドで、画面を使わずにサンプルデータファイルを読み込むことでこの問題を回避できます。
+
+1. コマンドラインクライアントをquitでいったん終了するか、スタートメニューの「MariaDB」→「Command Prompt (MariaDB)」でコマンドプロンプトを表示する
+1. `mysql データベース名 -uユーザ名 -p --default-character-set=utf8mb4 < SQLファイル名` を実行する
+
+以下は、ユーザー`root`で、`testdb`に`testdb.sql`を読み込んでいます。
+データベース`testdb`を作成した後に実行してください（[→サンプルデータベースの作成](#sampledb-mariadb)）。
+
+ファイル名のパスがよくわからない場合は`<`記号まで入力したところで、ダウンロードしたサンプルデータファイルをドラッグ＆ドロップしてください。
+
+```
+mysql testdb -uroot -p --default-character-set=utf8mb4 < c:\users\study\downloads\testdb.sql
+```
+
+実行画面（参考、クリックで拡大）
+`mysql testdb -uroot -p --default-character-set=utf8mb4 <` まで入力してファイルをドラッグ＆ドロップ  
+<a href="images/2020-10-01-16-50-09.png"><img src="images/2020-10-01-16-50-09.png" width="600" /></a>
+
+ファイルのパスが入るのでEnterで実行
+<a href="images/2020-10-01-16-51-50.png"><img src="images/2020-10-01-16-51-50.png" width="600" /></a>
+
+パスワードを入力してEnter  
+<a href="images/2020-10-01-16-54-07.png"><img src="images/2020-10-01-16-54-07.png" width="600" /></a>
+
+（処理が完了した）
+<a href="images/2020-10-01-16-54-46.png"><img src="images/2020-10-01-16-54-46.png" width="600" /></a>
+
+あらためて、`mysql データベース名 -uユーザー名 -p`でコマンドラインクライアントを実行  
+（データベースを省略した場合は起動後に`use データベース名` で選択）  
+<a href="images/2020-10-01-16-57-14.png"><img src="images/2020-10-01-16-57-14.png" width="600" /></a>
 
 <a id="markdown-postgresql" name="postgresql"></a>
 ## PostgreSQL
