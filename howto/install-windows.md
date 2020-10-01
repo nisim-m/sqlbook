@@ -1,5 +1,8 @@
 [基本がわかるSQL入門 サポートページ](https://nisim-m.github.io/sqlbook/) ～テスト環境 その3～
 
+Windows環境に、MySQL、MariaDB、PostgreSQLをインストールする方法。  
+ポート番号が重複しなければ共存可能。
+
 <!-- TOC -->
 
 1. [MySQL](#mysql)
@@ -23,7 +26,7 @@
 
 # DBMSのみ（Windows環境）
 
-Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、PostgreSQL）、それぞれのコマンド画面からSQLを実行することができます（参考）。
+Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、PostgreSQL）、それぞれのコマンド画面からSQLを実行することができます。
 
 コマンドラインで使用するクライアントが一緒にインストールされるので、それぞれのコマンドラインクライアントから接続し、SQLの実行を試すことができます。Windows環境の場合、コマンドラインクライアントはスタートメニューから起動できます。
 
