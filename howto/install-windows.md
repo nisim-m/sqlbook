@@ -14,7 +14,8 @@
    5. [【参考】mysqlコマンドでサンプルデータを読み込むには](#参考mysqlコマンドでサンプルデータを読み込むには)
 3. [PostgreSQL](#postgresql)
    1. [インストール](#インストール)
-   2. [データベースの作成（psqlコマンド）](#データベースの作成psqlコマンド)
+   2. [コマンドラインクライアント（psqlコマンド）の起動](#コマンドラインクライアントpsqlコマンドの起動)
+   3. [ユーザーとデータベースの作成（psqlコマンド）](#ユーザーとデータベースの作成psqlコマンド)
 
 <!-- /TOC -->
 
@@ -258,18 +259,60 @@ PostgreSQLのダウンロードページ [https://www.postgresql.org/download/](
 ### インストール
 
 上記でダウンロードしたファイルを実行し、画面に従ってインストールを進めます。
+複数のバージョンを共存させたい場合、インストール時に設定するポート番号を、バージョン毎に違う数字にしてください。
 
-メモ：
-- 準備中
-
-以下は`.msi`による実行例です。※準備中  
+以下は`postgresql-12.4-1-windows-x64.exe`による実行例です（`postgresql-13.0-1-windows-x64.exe`も同じ手順でインストール可能です）。
 <a id="postgresql-install" name="postgresql-install"></a>[PostgreSQLのインストールサンプル（Windows環境）](install-windows-postgresql.md)
 
-<a id="markdown-データベースの作成psqlコマンド" name="データベースの作成psqlコマンド"></a>
-### データベースの作成（psqlコマンド）
+<a id="markdown-コマンドラインクライアントpsqlコマンドの起動" name="コマンドラインクライアントpsqlコマンドの起動"></a>
+### コマンドラインクライアント（psqlコマンド）の起動
+
+コマンドラインクライアント（psql.exe）はs、スタートメニューから実行できます。
+
+起動時に、サーバー、データベース、ポート番号、ユーザー名、コマンドラインクライアントで使用する文字コードを入力するがめのメッセージが表示されます。ここでは画面表示通りなので何も入力せずEnterで進めています。
+
+実行画面（参考）  
+<a href="images/images/2020-10-01-21-44-38.png"><img src="images/images/2020-10-01-21-44-38.png" width="500" /></a>
+
+サーバー名は`localhost`、データベースは`postgres`（管理用のデータベース）、ポート番号はインストール時に設定したポート番号（画面に表示されている）、コマンドラインクライアントで使用する文字コード（WindowsのデフォルトであるSJISを使用）を指定し、パスワードを入力  
+<a href="images/2020-10-01-22-08-07.png"><img src="images/2020-10-01-22-08-07.png" width="600" /></a>
 
 
-![](2020-10-01-21-44-38.png)
+<a id="markdown-ユーザーとデータベースの作成psqlコマンド" name="ユーザーとデータベースの作成psqlコマンド"></a>
+### ユーザーとデータベースの作成（psqlコマンド）
+
+コマンドラインクライアントが起動すると、`postgres=#`というプロンプトが表示されるので、以下のコマンドを実行します。  
+※--以降はコメントなので入力不要です。この画面からコピー＆ペーストして実行する場合は--以降の部分も一緒にペーストしてかまいません。  
+※SQLのキーワードは大文字にしていますが、入力は小文字でもかまいません（p.24 2.1節「SQLの種類と基本的な書式」）。
+
+なお、ローカルPCで、psqlコマンドを使ってSQLを試すだけであればユーザーを別途作成せず、管理ユーザーであるpostgresのみの利用でも問題ないでしょう。この場合`CREATE USER`は実行せず、CREATE DATABASEに進んでください。
+
+作成済のデータベースは`\l`コマンド（psql用のコマンド）で一覧表示できます。
+
+```
+-- データベース接続用のユーザーを作成（任意）
+-- CREATE USER ユーザー名 PASSWORD 'データベース接続用のパスワード';
+CREATE USER study PASSWORD 'mypassword';
+
+-- サンプルデータベース用のデータベース3つを作成
+CREATE DATABASE testdb OWNER study ENCODING 'UTF-8';
+CREATE DATABASE sampledb OWNER study ENCODING 'UTF-8';
+CREATE DATABASE sampledb2 OWNER study ENCODING 'UTF-8';
+
+-- 作成したデータベースを一覧表示
+\l
+```
+
+（参考）
+```
+-- ユーザーを作成せず、ユーザー「postgres」だけを使用する場合
+CREATE DATABASE testdb ENCODING 'UTF-8';
+CREATE DATABASE sampledb ENCODING 'UTF-8';
+CREATE DATABASE sampledb2  ENCODING 'UTF-8';
+```
+<a href="images/2020-10-01-22-23-38.png"><img src="images/2020-10-01-22-23-38.png" width="600" /></a>
+<a href="images/2020-10-01-22-26-56.png"><img src="images/2020-10-01-22-26-56.png" width="600" /></a>
+<a href="images/2020-10-01-22-28-05.png"><img src="images/2020-10-01-22-28-05.png" width="600" /></a>
 
 [→サンプルデータ](../index.md#sampledata)
 

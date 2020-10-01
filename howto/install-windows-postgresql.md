@@ -2,7 +2,7 @@
 
 ## PostgreSQLのインストール（Windows環境）
 テスト環境 その3 [DBMSのみ（Windows）](install-windows.md#postgresql-install)より  
-以下は`postgresql-12.4-1-windows-x64.exe`による実行例です。
+以下は`postgresql-12.4-1-windows-x64.exe`による実行例です（`postgresql-13.0-1-windows-x64.exe`も同じ手順でインストール可能です）。
 
 <a href="images/2020-10-01-21-28-28.png"><img src="images/2020-10-01-21-28-28.png" width="300" /></a>
 
