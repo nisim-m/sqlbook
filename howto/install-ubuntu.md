@@ -520,7 +520,7 @@ sudo -u postgres createdb -E utf-8 -O study sampledb2
 ```
 -- （参考）
 CREATE USER study PASSWORD 'DB接続用のパスワード';
-CREATE DATABASE testdb OWNER "study" ENCODING 'UTF-8';
+CREATE DATABASE testdb OWNER study ENCODING 'UTF-8';
 ```
 
 先ほどと同じALTER文で、テスト用のユーザー「study」がPostgreSQLに接続する際のパスワードを設定します。
