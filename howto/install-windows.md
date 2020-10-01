@@ -240,7 +240,7 @@ mysql testdb -uroot -p --default-character-set=utf8mb4 < c:\users\study\download
 `mysql testdb -uroot -p --default-character-set=utf8mb4 <` まで入力してファイルをドラッグ＆ドロップ  
 <a href="images/2020-10-01-16-50-09.png"><img src="images/2020-10-01-16-50-09.png" width="600" /></a>
 
-ファイルのパスが入るのでEnterで実行
+ファイルのパスが入るのでEnterで実行  
 <a href="images/2020-10-01-16-51-50.png"><img src="images/2020-10-01-16-51-50.png" width="600" /></a>
 
 パスワードを入力してEnter  
