@@ -65,8 +65,10 @@ MySQLのダウンロードページ [https://www.mysql.com/jp/downloads/](https:
 
 サーバーだけで良い場合や複数バージョンをインストールしたい場合は「Custom」を選択  
 <a href="images/2020-09-30-19-44-25.png"><img src="images/2020-09-30-19-44-25.png" width="400" /></a>
+
 サーバーを選んで右矢印をクリックして追加  
 <a href="images/2020-09-30-19-45-43.png"><img src="images/2020-09-30-19-45-43.png" width="400" /></a>
+
 （他のバージョンが必要な場合は追加）  
 <a href="images/2020-09-30-19-46-49.png"><img src="images/2020-09-30-19-46-49.png" width="400" /></a>
 
@@ -76,14 +78,17 @@ MySQLのダウンロードページ [https://www.mysql.com/jp/downloads/](https:
 バージョンによっては追加ソフトウェア（Microsoft Visual C++のライブラリ）が必要になることがあります。
 **「Execute」をクリック**することでインストールできます。  
 <a href="images/2020-09-30-19-48-26.png"><img src="images/2020-09-30-19-48-26.png" width="400" /></a>
+
 （Microsoft Visual C++ 2013 ※MySQL 5.7用）  
 <a href="images/2020-09-30-19-49-45.png"><img src="images/2020-09-30-19-49-45.png" width="300" /></a>
 <a href="images/2020-09-30-19-49-54.png"><img src="images/2020-09-30-19-49-54.png" width="300" /></a>
 
+追加ソフトウェアのインストールが完了したら「Next」をクリック  
 <a href="images/2020-09-30-19-50-26.png"><img src="images/2020-09-30-19-50-26.png" width="400" /></a>
 
 「Read to download」と表示されたら「Execute」をクリック  
 <a href="images/2020-09-30-19-51-55.png"><img src="images/2020-09-30-19-51-55.png" width="400" /></a>
+
 ダウンロード開始  
 <a href="images/2020-09-30-19-56-59.png"><img src="images/2020-09-30-19-56-59.png" width="400" /></a>
 
@@ -92,7 +97,8 @@ MySQLのダウンロードページ [https://www.mysql.com/jp/downloads/](https:
 
 ダウンロードが終わると「Complete」と表示されるので「Next」で進める  
 <a href="images/2020-09-30-19-54-04.png"><img src="images/2020-09-30-19-54-04.png" width="400" /></a>
-「Ready to configure」と表示されるので「Next」で設定を開始する
+
+「Ready to configure」と表示されるので「Next」で設定を開始する  
 <a href="images/2020-09-30-19-54-53.png"><img src="images/2020-09-30-19-54-53.png" width="400" /></a>
 
 「Type and Networking」画面で**ポート番号を設定**する  
@@ -100,7 +106,8 @@ MySQLのダウンロードページ [https://www.mysql.com/jp/downloads/](https:
 <a href="images/2020-09-30-20-20-02.png"><img src="images/2020-09-30-20-20-02.png" width="400" /></a>
 
 管理者用のパスワードを入力し、「Add User」でテスト用のユーザーを追加する  
-<a href="images/2020-09-30-20-26-53.png"><img src="images/2020-09-30-20-26-53.png" width="400" /></a>
+<a href="images/2020-09-30-20-26-53.png"><img src="images/2020-09-30-20-26-53.png" width="400" /></a>  
+
 ユーザー名を入力（任意、ここでは「study」）して、ホストは「localhost」にする  
 データベースの作成やデータのインポートを行うユーザーの場合、ロールは「DB Admin」にする  
 パスワードを入力して「OK」をクリック（自分専用のローカルPCで使用する場合は簡単なパスワードでも良い）   
@@ -149,8 +156,7 @@ MySQLサーバーをインストールすると、コマンドラインクライ
 インストール時に設定したテスト用ユーザーのパスワードを入力してEnterして接続してください。
 接続できると「mysql>」というプロンプトが表示されます。ここで、SQL文を入力して実行します。
 
-
-実行画面およびプロンプトは各バージョン共通  
+実行画面およびプロンプトは各バージョン共通です。  
 バージョン8.0.x：  
 <a href="images/2020-09-30-20-58-11.png"><img src="images/2020-09-30-20-58-11.png" width="600" /></a>
 
