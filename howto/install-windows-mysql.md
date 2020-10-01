@@ -65,7 +65,7 @@
 ユーザーを追加したら「Next」で進める  
 <a href="images/2020-09-30-20-31-56.png"><img src="images/2020-09-30-20-31-56.png" width="400" /></a>
 
-デフォルトでは、Windows起動時にMySQLサーバーがWindowsサービスとして起動する（変更可能）  
+デフォルトでは、Windows起動時にMySQLサーバーがWindowsサービスとして起動する（変更可能、実行状態はタスクマネージャーの詳細→サービスで確認できる）  
 <a href="images/2020-09-30-20-33-15.png"><img src="images/2020-09-30-20-33-15.png" width="400" /></a>
 
 「Execute」でインストールを実行（設定を修正したい場合は「Back」で戻る）  
