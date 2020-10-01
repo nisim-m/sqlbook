@@ -20,13 +20,9 @@
 
 # DBMSのみ（Windows環境）
 
-Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、PostgreSQL）、それぞれのコマンド画面からSQLを実行（参考）
+Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、PostgreSQL）、それぞれのコマンド画面からSQLを実行することができます（参考）。
 
-インストール時に、
-- ポート番号を重複しないよう変更する
-- テスト接続用のユーザーを追加（ユーザー名とパスワードを設定、Hostは`localhost`にする
-
-インストールすると、スタートメニューにそれぞれのクライアントが登録される。
+コマンドラインで使用するクライアントが一緒にインストールされるので、それぞれのコマンドラインクライアントから接続し、SQLの実行を試すことができます。Windows環境の場合、コマンドラインクライアントはスタートメニューから起動できます。
 
 <a id="markdown-mysql" name="mysql"></a>
 ## MySQL
@@ -253,10 +249,10 @@ mysql testdb -uroot -p --default-character-set=utf8mb4 < c:\users\study\download
 <a id="markdown-postgresql" name="postgresql"></a>
 ## PostgreSQL
 
-※準備中
-日本PostgreSQLユーザー会のダウンロードページ [https://www.postgresql.jp/download](https://www.postgresql.jp/download) にダウンロードリンクとインストールガイドが掲載されています。Windows用のダウンロードリンク（[https://www.postgresql.org/download/windows/](https://www.postgresql.org/download/windows/)）で「Download the installer」をクリックし、「Download」をクリックします。
+PostgreSQLのダウンロードページ [https://www.postgresql.org/download/](https://www.postgresql.org/download/)で、Windowsをクリックし、「Download the installer」をクリックします。EDB（[EnterpriseDB Corporation](https://ja.wikipedia.org/wiki/EnterpriseDB)）のダウンロードページが表示されるので、「Download」をクリックします。
 
 さまざまなバージョンが公開されていますが、通常は、最新版が良いでしょう。
+本書では、執筆時点の最新版であった12.4を使用しています（2020.9.24にバージョン13がリリース→[日本語版プレスキット](https://www.postgresql.org/about/press/presskit13/ja/)）。
 
 <a id="markdown-インストール" name="インストール"></a>
 ### インストール
@@ -271,6 +267,9 @@ mysql testdb -uroot -p --default-character-set=utf8mb4 < c:\users\study\download
 
 <a id="markdown-データベースの作成psqlコマンド" name="データベースの作成psqlコマンド"></a>
 ### データベースの作成（psqlコマンド）
+
+
+![](2020-10-01-21-44-38.png)
 
 [→サンプルデータ](../index.md#sampledata)
 
