@@ -91,5 +91,6 @@ Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、P
 
 - 2020.10 サポートページ公開
 - 2020.11.4 正誤表追加（図4.8, 図4.11）
+
 ----
 [基本がわかるSQL入門 <small>——データベース&設計の基礎から楽しく学ぶ</small> サポートページ](https://nisim-m.github.io/sqlbook/)
