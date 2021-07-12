@@ -95,7 +95,7 @@ CREATE DATABASE testdb default character set utf8mb4;
 CREATE DATABASE sampledb default character set utf8mb4;
 CREATE DATABASE sampledb2 default character set utf8mb4;
 
---確認（MySQLで管理しているデータベースが一覧表示される）
+-- 確認（MySQLで管理しているデータベースが一覧表示される）
 SHOW DATABASES; 
 ```
 
