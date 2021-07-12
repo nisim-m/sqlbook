@@ -60,8 +60,8 @@ MySQLのダウンロードページ [https://www.mysql.com/jp/downloads/](https:
 - 複数バージョンをインストールする場合はバージョンごとにポート番号を変更する
 - 各バージョンごとにテスト用ユーザーを追加する（同じ名前でも良い）
 
-以下は`mysql-installer-web-community-8.0.21.0.msi`による実行例です。  
-<a id="mysql-install" name="mysql-install"></a>[→MySQLのインストールサンプル（Windows環境）](install-windows-mysql.md)
+以下のは`mysql-installer-web-community-8.0.21.0.msi`による実行例です。  
+<a id="mysql-install" name="mysql-install"></a>[（インストーラーの画面を参考にしたい方はこちら→）MySQLのインストールサンプル（Windows環境）](install-windows-mysql.md)
 
 <a id="markdown-コマンドラインクライアントmysqlコマンドの起動" name="コマンドラインクライアントmysqlコマンドの起動"></a>
 ### コマンドラインクライアント（mysqlコマンド）の起動
