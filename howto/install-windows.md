@@ -60,7 +60,7 @@ MySQLのダウンロードページ [https://www.mysql.com/jp/downloads/](https:
 - 複数バージョンをインストールする場合はバージョンごとにポート番号を変更する
 - 各バージョンごとにテスト用ユーザーを追加する（同じ名前でも良い）
 
-以下のは`mysql-installer-web-community-8.0.21.0.msi`による実行例です。  
+以下のリンクは`mysql-installer-web-community-8.0.21.0.msi`による実行例です。  
 <a id="mysql-install" name="mysql-install"></a>[（インストーラーの画面を参考にしたい方はこちら→）MySQLのインストールサンプル（Windows環境）](install-windows-mysql.md)
 
 <a id="markdown-コマンドラインクライアントmysqlコマンドの起動" name="コマンドラインクライアントmysqlコマンドの起動"></a>
@@ -119,8 +119,8 @@ MariaDBのダウンロードページ [https://mariadb.com/downloads/](https://m
 - MySQLサーバーなどと共存させたい場合はポート番号を変更する
 - インストール後、設定ファイル「my.ini」（スタートメニュー「MariaDBグループ）でデフォルトの文字コードを変更する
 
-以下は`mariadb-10.5.5-winx64.msi`による実行例です。
-<a id="mariadb-install" name="mariadb-install"></a>[→MariaDBのインストールサンプル（Windows環境）](install-windows-mariadb.md)
+以下のリンクは`mariadb-10.5.5-winx64.msi`による実行例です。<br>
+<a id="mariadb-install" name="mariadb-install"></a>[（インストーラーの画面を参考にしたい方はこちら→）MariaDBのインストールサンプル（Windows環境）](install-windows-mariadb.md)
 
 <a id="markdown-コマンドラインクライアントmysqlコマンドの起動-1" name="コマンドラインクライアントmysqlコマンドの起動-1"></a>
 ### コマンドラインクライアント（mysqlコマンド）の起動
