@@ -256,7 +256,9 @@ mysql testdb -uroot -p --default-character-set=utf8mb4 < c:\users\study\download
 <a id="markdown-postgresql" name="postgresql"></a>
 ## PostgreSQL
 
-PostgreSQLのダウンロードページ [https://www.postgresql.org/download/](https://www.postgresql.org/download/)で、Windowsをクリックし、「Download the installer」をクリックします。EDB（[EnterpriseDB Corporation](https://ja.wikipedia.org/wiki/EnterpriseDB)）のダウンロードページが表示されるので、「Download」をクリックします。
+PostgreSQLのダウンロードページ [https://www.postgresql.org/download/](https://www.postgresql.org/download/)
+で、Windowsをクリックし、「Download the installer」をクリックします。EDB（[EnterpriseDB Corporation](https://ja.wikipedia.org/wiki/EnterpriseDB)）
+のダウンロードページが表示されるので、「Download」をクリックします。
 
 さまざまなバージョンが公開されていますが、通常は、最新版が良いでしょう。
 本書では、執筆時点の最新版であった12.4を使用しています（2020.9.24にバージョン13がリリース→[日本語版プレスキット](https://www.postgresql.org/about/press/presskit13/ja/)）。
@@ -267,8 +269,8 @@ PostgreSQLのダウンロードページ [https://www.postgresql.org/download/](
 上記でダウンロードしたファイルを実行し、画面に従ってインストールを進めます。
 複数のバージョンを共存させたい場合、インストール時に設定するポート番号を、バージョン毎に違う数字にしてください。
 
-以下は`postgresql-12.4-1-windows-x64.exe`による実行例です（`postgresql-13.0-1-windows-x64.exe`も同じ手順でインストール可能です）。
-<a id="postgresql-install" name="postgresql-install"></a>[PostgreSQLのインストールサンプル（Windows環境）](install-windows-postgresql.md)
+以下のリンクは`postgresql-12.4-1-windows-x64.exe`による実行例です（`postgresql-13.0-1-windows-x64.exe`も同じ手順でインストール可能です）。<br>
+<a id="postgresql-install" name="postgresql-install"></a>[（インストーラーの画面を参考にしたい方はこちら→）PostgreSQLのインストールサンプル（Windows環境）](install-windows-postgresql.md)
 
 <a id="markdown-コマンドラインクライアントpsqlコマンドの起動" name="コマンドラインクライアントpsqlコマンドの起動"></a>
 ### コマンドラインクライアント（psqlコマンド）の起動
