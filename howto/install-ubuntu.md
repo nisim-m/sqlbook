@@ -65,6 +65,9 @@ https://www.ubuntulinux.jp/download
 
 VirtualBoxのインストーラーを実行し、画面に従ってインストールを行ってください。
 
+*※Windows環境でのインストールで<a href="images\2023-01-02-17-16-54.png">“Oracle VM VirtualBox 7.x.x needs the Microsoft Visual C++ 2019 Redistributable Packaging being installed first.”のようなメッセージ</a>が表示された場合、Microsoftのサイトからダウンロードしてインストールしてください。（<a href="https://visualstudio.microsoft.com/ja/downloads/">https://visualstudio.microsoft.com/ja/downloads/</a> “Microsoft Visual C++ Redistributable for Visual Studio 2022” [画面例](install-vcpp.md)）*
+
+
 <a id="markdown-仮想マシンの作成" name="仮想マシンの作成"></a>
 ### 仮想マシンの作成
 
