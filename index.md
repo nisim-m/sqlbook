@@ -110,6 +110,7 @@ Windows版のDBMSだけをインストール（MySQL 5.7、MySQL 8、MariaDB、P
 - 2021.6.7 正誤表（図5.17）、補足事項追加
 - 2021.7.19 正誤表（6.1～6.10）追加
 - 2021.11.8 正誤表（2.5）追加
+- 2023.1.2 Windows版VirtualBox 7.0 について追記 <small>（[Oracle VM VirtualBox 7.x.x needs the Microsoft Visual C++ 2019 Redistributable Packaging being installed first.”のようなメッセージが表示された場合](howto/install-vcpp.md)）</small>
 
 ----
 [基本がわかるSQL入門 <small>——データベース&設計の基礎から楽しく学ぶ</small> サポートページ](https://nisim-m.github.io/sqlbook/)
