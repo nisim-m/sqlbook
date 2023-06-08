@@ -17,7 +17,7 @@
    3. [テスト用ユーザーの作成](#テスト用ユーザーの作成)
 4. [phpMyAdminのインストール<small>（WebブラウザでSQL文を試したい場合のみ）</small>](#phpmyadminのインストールsmallwebブラウザでsql文を試したい場合のみsmall)
 5. [Adminerのインストール<small>（WebブラウザでSQL文を試したい場合のみ）</small>](#adminerのインストールsmallwebブラウザでsql文を試したい場合のみsmall)
-6. [PostgreSQLのインストール](#postgresqlのインストール)
+6. (参考)[PostgreSQLのインストール](#postgresqlのインストール)
    1. [DB管理者用パスワードの設定](#db管理者用パスワードの設定)
    2. [テスト用ユーザーおよびサンプル用データベースの作成](#テスト用ユーザーおよびサンプル用データベースの作成)
    3. [Webブラウザから接続するための設定](#webブラウザから接続するための設定)
