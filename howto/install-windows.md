@@ -102,6 +102,8 @@ SHOW DATABASES;
 実行イメージ  
 <a href="images/2020-10-01-01-04-54.png"><img src="images/2020-10-01-01-04-54.png" /></a>
 
+[→サンプルデータ](../index.md#sampledata)
+
 <a id="markdown-mariadb" name="mariadb"></a>
 ## MariaDB 
 
@@ -252,6 +254,8 @@ mysql testdb -uroot -p --default-character-set=utf8mb4 < c:\users\study\download
 あらためて、`mysql データベース名 -uユーザー名 -p`でコマンドラインクライアントを実行  
 （データベースを省略した場合は起動後に`use データベース名` で選択）  
 <a href="images/2020-10-01-16-57-14.png"><img src="images/2020-10-01-16-57-14.png" width="600" /></a>
+
+[→サンプルデータ](../index.md#sampledata)
 
 <a id="markdown-postgresql" name="postgresql"></a>
 ## PostgreSQL
