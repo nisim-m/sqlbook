@@ -1,0 +1,6 @@
+theme: jekyll-theme-minimal
+logo: book.png
+title: 基本がわかるSQL入門
+description: 「基本がわかるSQL入門」サポートページ <br />正誤表、補足情報、サンプルデータなど
+show_downloads: false
+google_analytics: 

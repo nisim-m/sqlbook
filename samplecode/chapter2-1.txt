@@ -1,0 +1,125 @@
+/* ========================================
+Chapter: 第2章 SQL初級編　……実際に書いて試してみよう
+testdb用
+   ======================================== */
+
+-- # 2.2 テーブルの作成と削除　……CREATE TABLE、DROP TABLE
+-- ## テーブルの作成　CREATE TABLE
+-- ----------
+DROP TABLE IF EXISTS exams;
+DROP TABLE IF EXISTS students;
+-- ----------
+-- studentsテーブルを作成する
+CREATE TABLE students (
+    student_id CHAR(5) NOT NULL PRIMARY KEY,
+    student_name VARCHAR(255) NOT NULL,
+    branch VARCHAR(255) NOT NULL
+);
+-- ----------
+
+-- ## テーブルの削除　DROP TABLE
+-- ----------
+DROP TABLE students;
+-- ----------
+
+-- # 2.3 参照制約（外部キー）の設定　……FOREIGN KEY、REFERENCES
+-- ----------
+-- （あらためてstudentsテーブルを作成する）
+CREATE TABLE students (
+    student_id CHAR(5) NOT NULL PRIMARY KEY,
+    student_name VARCHAR(255) NOT NULL,
+    branch VARCHAR(255) NOT NULL
+);
+-- examsテーブルを参照制約付きで作成
+CREATE TABLE exams (
+   student_id CHAR(5) NOT NULL,
+   exam_no INTEGER NOT NULL,   -- 試験番号（第41回の試験、のように使用）
+   subject VARCHAR(255) NOT NULL, -- 科目
+   score INTEGER NOT NULL,        -- 得点
+   PRIMARY KEY (student_id, exam_no, subject),
+   FOREIGN KEY (student_id) REFERENCES students (student_id)
+);
+-- ----------
+
+-- # 2.4 データの追加　……INSERT INTO
+-- ----------
+INSERT INTO students(student_id, student_name,branch) 
+VALUES ('C0001','谷内 ミケ','渋谷');
+-- ----------
+
+-- ----------
+-- 列名を省略した場合
+INSERT INTO students VALUES ('C0002','山村 つくね','池袋');
+INSERT INTO students VALUES ('C0003','北川 ジョン','新宿');
+-- ----------
+
+-- ## 外部キーがあるテーブルにデータを登録する
+-- ----------
+INSERT INTO exams VALUES('C0001', 41, '国語', 90);
+INSERT INTO exams VALUES('C0001','41','英語', 93);
+INSERT INTO exams VALUES('C0002', 41, '国語', 95);
+INSERT INTO exams VALUES('C0002','41','英語', 92);
+-- student_idがstudentsテーブルにない場合はエラーになる
+INSERT INTO exams VALUeS('C9999','41','英語', 80);
+-- ----------
+
+-- ## 【Column】識別子に使用可能な文字
+-- # 2.5 データの変更　……UPDATE
+-- ----------
+SELECT * FROM exams WHERE student_id = 'C0001';
+-- ----------
+
+-- ----------
+UPDATE exams SET score = score + 5
+ WHERE student_id = 'C0001';
+-- ----------
+
+-- ----------
+UPDATE exams SET score = score - 5
+WHERE student_id = 'C0001';
+-- ----------
+
+-- ## 更新できないデータが含まれていた場合
+-- ----------
+UPDATE exams
+SET score = CASE WHEN score + 10 > 100
+    THEN 100 ELSE score + 10 END
+WHERE student_id = 'C0001';
+-- ----------
+
+-- ## 【Column】おもなDBMSのキーワード（予約語）
+-- # 2.6 データの削除　……DELETE
+-- ----------
+-- データの表示（これから削除されるデータの確認）
+SELECT * FROM exams
+WHERE student_id = 'C0001';
+-- 同じWHERE指定でデータを削除
+DELETE FROM exams
+WHERE student_id = 'C0001';
+-- ----------
+
+-- ## 参照されているデータの削除
+-- ## 【Column】トランザクションの活用（START TRANSACTION、ROLLBACK、COMMIT）
+-- ----------
+-- トランザクションを開始する
+START TRANSACTION;
+-- 現在のデータを確認する
+SELECT * FROM 選択コース;
+-- データをすべて削除する
+DELETE FROM 選択コース;
+-- 削除されているか確認してみる
+SELECT * FROM 選択コース;
+-- データを元に戻す
+ROLLBACK;
+ -- 削除されているか確認してみる
+SELECT * FROM 選択コース;
+-- ----------
+
+-- ----------
+START TRANSACTION;      -- トランザクションを開始する※
+DELETE FROM 選択コース; -- データをすべて削除する
+ROLLBACK; -- データを元に戻す
+
+-- ※PostgreSQLではBEGIN TRANSACTIONも使用可能。
+-- ----------
+

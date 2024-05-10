@@ -1,0 +1,209 @@
+/* ========================================
+Chapter: 第2章 SQL初級編　……実際に書いて試してみよう
+sampledb用
+   ======================================== */
+-- # 2.1 SQLの種類と基本的な書式　……書き方のルールを確認しよう
+-- ## 標準SQLとSQLの方言
+-- ## SQLの5つの記述ルール
+-- ## (1)各単語は半角スペースまたは改行で区切り、文末には「;」を付ける
+-- ----------
+SELECT student_id, student_name FROM students WHERE branch= '新宿';
+-- ----------
+
+-- ----------
+SELECT student_id, student_name
+FROM students
+WHERE branch='新宿';
+-- ----------
+
+-- ----------
+SELECT student_id, student_name
+     FROM students
+     WHERE branch='新宿';
+-- ----------
+
+-- ## (2)キーワードは大文字でも小文字でもよい
+-- ## (3)テーブル名や列名には（原則として）半角英数字と「_」を使う
+-- ## (4)文字列や日付は「'～'」で囲む
+-- ----------
+SELECT * FROM students WHERE branch='新宿';
+SELECT * FROM exams WHERE score >= 80;
+-- ----------
+
+-- ## (5)コメントは「--」の後ろか、「/*」と「*/」の間に書く
+-- ----------
+SELECT * FROM students WHERE branch='新宿'; -- 新宿校舎に通っている生徒の一覧
+SELECT * FROM exams /* 試験成績を保存するテーブル */ WHERE score >= 80;
+/*
+  新宿校舎で90点以上を取ったことがある生徒の一覧
+*/
+SELECT DISTINCT student_name FROM students
+  JOIN exams ON students.student_id = exams.student_id
+  WHERE branch = '新宿' AND score >= 90;
+-- ----------
+
+-- # 2.7 データの問い合わせ　……SELECT
+-- ## テーブルを表示する　問い合わせ(1)
+-- ----------
+-- 条件を指定せず全件を表示
+SELECT * FROM students;
+-- ----------
+
+-- ----------
+-- WHEREで指定した条件に一致する行だけを表示
+SELECT student_id, student_name FROM students
+WHERE branch = '新宿';
+-- ----------
+
+-- ## データを並べ替える　問い合わせ(2)
+-- ----------
+-- (1)schoolの順で並べ替え
+SELECT student_id, student_name, school FROM students
+WHERE branch = '新宿'
+ORDER BY school;
+-- ----------
+
+-- ----------
+-- (2)student_idの降順で並べ替え
+SELECT student_id, student_name, school FROM students
+WHERE branch = '新宿'
+ORDER BY student_id DESC;
+-- ----------
+
+-- ## データを集計する　問い合わせ(3)
+-- ----------
+SELECT COUNT(*) FROM students WHERE branch='新宿';
+-- ----------
+
+-- ----------
+SELECT branch, COUNT(*) FROM students GROUP BY branch;
+-- ----------
+
+-- ## 集計結果で並べ替える　集計補足(1)
+-- ----------
+-- (1)branchごとに件数を数えて、branchと件数を、件数の少ない順に表示
+SELECT branch, COUNT(*) FROM students GROUP BY branch
+ORDER BY COUNT(*);
+-- ----------
+
+-- ----------
+-- (2)branchごとに件数を数えて、branchを、件数の多い順に表示
+SELECT branch FROM students GROUP BY branch
+ORDER BY COUNT(*) DESC;
+-- ----------
+
+-- ----------
+SELECT branch AS 校舎, COUNT(*) AS 人数
+FROM students GROUP BY branch; -- ←(1)
+-- ----------
+
+-- ----------
+SELECT branch AS 校舎, COUNT(*) AS 人数
+FROM students GROUP BY branch
+ORDER BY COUNT(*); -- ←(2)
+-- ----------
+
+-- ----------
+SELECT branch AS 校舎, COUNT(*) AS 人数
+FROM students GROUP BY 校舎
+ORDER BY 人数; -- ←(3)
+-- ----------
+
+-- ## テーブルを結合する　問い合わせ(4)
+-- ----------
+SELECT *
+FROM courses
+JOIN students ON courses.student_id = students.student_id;
+-- ----------
+
+-- ----------
+SELECT students.student_id, student_name, course
+FROM courses
+JOIN students ON courses.student_id = students.student_id;
+-- ----------
+
+-- ----------
+SELECT students.student_id, students.student_name, courses.course
+FROM courses
+JOIN students ON courses.student_id = students.student_id;
+-- ----------
+
+-- ## 結合した結果を絞り込む、並べ替える　結合補足(1)
+-- ----------
+SELECT students.student_id, student_name, course
+FROM courses
+JOIN students ON courses.student_id = students.student_id
+WHERE branch='新宿'
+ORDER BY course;
+-- ----------
+
+-- ## 結合した結果を集計する　結合補足(2)
+-- ----------
+SELECT course, COUNT(*)
+FROM courses
+JOIN students ON courses.student_id = students.student_id
+GROUP BY course
+ORDER BY COUNT(*);
+-- ----------
+
+-- ----------
+SELECT branch, course, COUNT(*)
+FROM courses
+JOIN students ON courses.student_id = students.student_id
+GROUP BY branch, course
+ORDER BY branch, course;
+-- ----------
+
+-- # 2.8 ビューの作成と削除　……CREATE VIEW/DROP VIEW
+-- ## ビューの作成
+-- ----------
+CREATE VIEW コース別人数一覧 AS
+SELECT branch, course, COUNT(*) AS 人数
+FROM courses
+JOIN students ON courses.student_id = students.student_id
+GROUP BY branch, course
+ORDER BY branch, course;
+-- ----------
+
+-- ----------
+SELECT * FROM コース別人数一覧 WHERE 人数>=25;
+-- ----------
+
+-- ## ビューの削除
+-- ----------
+DROP VIEW コース別人数一覧;
+-- ----------
+
+-- ----------
+DROP VIEW IF EXISTS view2;
+DROP VIEW IF EXISTS view1;
+-- ----------
+
+-- view1を作成する
+CREATE VIEW view1 AS
+SELECT students.student_id, student_name, course
+FROM courses
+JOIN students ON courses.student_id = students.student_id;
+
+-- view1を参照しているview2を作成する
+CREATE VIEW view2 AS SELECT student_id, student_name
+FROM view1 WHERE course='国語';
+
+-- view2を表示
+-- （国語を選択している生徒のstudent_idとstudent_nameが表示される）
+SELECT * FROM view2;
+
+-- view1を削除する※
+DROP VIEW view1;
+
+-- 改めてview2を表示
+-- （view1が存在していないためエラーになる）
+SELECT * FROM view2;
+
+/*
+※PostgreSQLの場合、view1はview2を参照しているため削除できない。view2を先に削除するか、「DROP VIEW view1 CASCADE;」のように「CASCADE」を指定することで、view1を参照しているview2も同時に削除できる。
+*/
+-- ----------
+
+-- # 2.9 バッカス記法（BNF）　……読めると便利！ マニュアルの書式
+
